@@ -1,0 +1,66 @@
+.page-blog-article
+	.player
+		margin-bottom: 0 !important
+		&__head
+			margin-bottom: 20px
+		&__desc
+			max-width: 938px
+		&__note
+			font-weight: 500
+		&__stat
+			color: $gray-dark
+			margin-bottom: 10px
+		&__stage
+		&__playlist
+			&.show
+
+		&__game
+			height: 64px
+			padding: 0 24px
+		&__group
+			padding: 0 25px
+		&__burger
+			&::before,
+			&::after
+				background: $gray-dark
+	.trending
+		&__row
+			display: flex
+			+x
+				display: block
+		&__col
+			padding-top: 0
+			&:first-child
+				flex: 0 0 calc(100% - 330px)
+				width: calc(100% - 330px)
+				max-width: calc(100% - 330px)
+				padding-right: 60px
+				+w
+					flex: 0 0 calc(100% - 280px)
+					width: calc(100% - 280px)
+					max-width: calc(100% - 280px)
+				+x
+					width: 100%
+					max-width: 100%
+					margin-bottom: 48px
+					padding: 0  
+			&:nth-child(2)
+				flex: 0 0 330px
+				width: 330px
+				max-width: 330px 
+				+w
+					flex: 0 0 280px
+					width: 280px
+					max-width: 280px 
+				+x
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					max-width: calc(100% + 32px)
+					width: auto
+					margin: 0 -16px 
+				+m
+					max-width: 100% 
+					margin: 0
+	.block-content
+		max-width: 800px

@@ -1,0 +1,144 @@
+.catalog-item
+	position: relative
+	border-radius: 24px
+	background: $wh
+	cursor: pointer
+	transition: box-shadow .25s
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		left: 7px
+		right: 7px
+		bottom: -15px
+		z-index: -1
+		transition: background .25s 
+		+shadow-sm
+	&__preview
+		position: relative
+		height: 240px
+		border-radius: 24px 24px 0 0
+		+cover
+		transition: opacity .25s
+		display: block
+		&:hover
+			opacity: 0.75
+	&__mark
+		position: absolute
+		top: 24px
+		left: 24px
+	&__details
+		padding: 30px 32px 7px
+		cursor: default
+	&__rate
+		margin-bottom: 4px
+		&:hover
+			.rate-item-info,
+			.rate-item-info-mid
+				color: $purple
+	&__title
+		margin-bottom: 10px
+		font-size: 19px
+		line-height: (24/18)
+		font-weight: 700
+		transition: color .25s
+		cursor: pointer
+		color: $bl
+		display: block
+		padding: 10px 0
+		+fn
+		&:hover
+			color: $blue
+	&__price
+		font-size: 24px
+		color: $green
+		font-weight: 700
+		line-height: 1.22
+		white-space: nowrap
+		&-holder
+			+ft
+			display: flex
+			margin-top: -8px
+			margin-bottom: 20px
+		&-small
+			font-size: 12px
+			margin-left: 2px
+		&-info
+			font-size: 11px
+			color: $gray-light
+			padding-top: 12px
+			padding-left: 10px
+			.divider
+				padding-right: 5px
+	&__address
+		svg
+			height: 14px !important
+		&-metro
+			margin-top: 8px
+		&-holder
+			+ft
+			line-height: 1.45
+			color: $gray-light
+			font-size: 14px
+			padding-left: 25px
+			margin-bottom: 24px
+			.item
+				position: relative
+			svg
+				fill: currentColor
+				position: absolute
+				top: 2px
+				left: -24px
+				width: 15px
+				height: 15px
+	&__icon
+		width: 30px
+		height: 30px
+		margin: 0 5px
+		&-holder
+			margin: -5px -5px 0
+			display: flex
+	&__bottom
+		display: flex
+		margin: 20px -6px
+		cursor: default
+	&__category
+		margin: 6px
+		font-size: 10px
+		line-height: 1
+		border-radius: 7px
+		padding: 6px 13px
+		font-weight: 600
+		opacity: 0.95
+		cursor: pointer
+	+m
+		max-width: 400px
+		margin-right: auto !important
+		margin-left: auto !important
+
++dark
+	.catalog-item
+		background: $dark1
+		&:before
+			+shadow-sm-dark
+		&:hover:before
+			background: rgba(#000, .5)
+		&__title
+			color: $wh
+		&__preview
+			&:hover
+				opacity: 1
+			.tag-small
+				background-color: $orange
+				color: $wh
+		&.active
+			box-shadow: 0 0 0 4px rgba($border-light, .1)
+		&:before
+			+shadow-sm-dark
+		&__actions
+			border-color: rgba($border-light, .1)
+
+
+
+

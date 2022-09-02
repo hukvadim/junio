@@ -1,0 +1,279 @@
+---
+title: Детский сад "Джерело Kids"
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			.page-catalog
+				.page-catalog-header
+					.page-catalog-header__side-wrapper
+						.page-catalog-header__main-content
+							.page-catalog-header__meta
+								a.tag-small.tag-small-mark.tag-small--vip(href="#") Plus
+								a.tag-small.tag-small-primary.tag-small--cat(href="#") Частный
+								a.tag-small.tag-small-green.tag-small--licence(href="#") Лицензия проверена
+								a.page-catalog-header__rate.rate-item(href="catalogPage__reviews.html")
+									.rate-stars.rate-stars-select-3
+										+i('star')
+										+i('star')
+										+i('star')
+										+i('star')
+										+i('star')
+									span.rate-item-info-mid 4.8
+									span.rate-item-info ( 2312 отзывов )
+							h1.page-catalog-header__title Детский сад "Джерело Kids"
+							.page-catalog-header__map.page-catalog-map
+								p.page-catalog__map-value-wrapper
+									span.page-catalog__map-value.dot-divider
+										+i('placeholder', 'svg-map-pin')
+										| Киев, ул. Причальная
+									span.page-catalog__map-value.map-value-district.dot-divider Голосеевский район
+									span.page-catalog__map-value.dot-divider.page-catalog__map-value-metro
+										+i('metro', 'svg-metro')
+										| Академгородок
+						.page-catalog-header__sideinfo
+							.page-catalog-header__social
+								a.page-catalog-header__social-item(href="#")
+									+i('facebook', 'svg-social-item')
+								a.page-catalog-header__social-item(href="#")
+									+i('instagram', 'svg-social-item')
+							.page-catalog-header__logo.ava
+								img.page-catalog-header__logo-img.ava__pic(src="img/logo-catalog-page.jpg")
+					.page-catalog-header__bottom
+						//--.page-catalog-header__btns
+							a.page-catalog-header__btn.btn-order.btn.btn_purple(href="#")
+								| Записаться на экскурсию
+							a.page-catalog-header__btn.btn-bookmark.btn-with-icon.btn.btn_gray(href="#")
+								+i('bookmark', 'svg-bookmark svg-in-btn')
+						.page-catalog-header__gallery.gallery-list.gallery-list--no-btns
+							.gallery-list.js-catalog-gallery.js-catalog-page.lightgallery
+								mixin slideSm(image)
+									.js-catalog-page-item(data-src="https://picsum.photos/1200/800")
+										img.js-catalog-page__img.img-cover(src="" + image + "")
+								+slideSm('img/main-pic-1.png')
+								+slideSm('img/main-pic-2.jpg')
+								+slideSm('img/main-pic-3.jpg')
+								+slideSm('img/main-pic-4.jpg')
+								+slideSm('img/main-pic-1.png')
+								+slideSm('img/main-pic-2.jpg')
+								+slideSm('img/main-pic-3.jpg')
+								+slideSm('img/main-pic-4.jpg')
+					.page-catalog-header__pattern
+					.page-catalog-header__shadow
+			+pageCatalogTabs('active')
+			.page__slider.page-catalog
+				+sidebar('', 'active')
+				.page-catalog-wrapper
+					.page__content
+						.block-contacts-catalog.page-catalog-content-devider
+							.block-contacts-catalog__ava.ava.ava-border-primary
+								img.ava__pic(src="img/ava-manager.jpg" alt="")
+							.block-contacts-catalog__text
+								p.block-contacts-catalog__name Чухрай Анастасия Петровна
+								p.block-contacts-catalog__work Директор / Заведующая
+								p.block-contacts-catalog__phone
+									| Номер нашего садика
+									a.phone.phone-toggle(href="#" data-phone='+38 (067) 70 55 689' data-phone-href='+380677055689')
+										| +38 (067) 70 ...
+										span - Показать
+								.block-contacts-catalog__work-hours.work-hours
+									.block-title-light.work-hours-label
+										| Время работы:
+									.work-hours__item
+										.work-hours__item-week
+											| Пн - Пт
+										.work-hours__item-hours
+											| 12.00 - 18.00
+									.work-hours__item
+										.work-hours__item-week
+											| Сб - Вс
+										.work-hours__item-hours
+											| 13.00 - 15.00
+						.block-catalog-preferences.page-catalog-content-devider.block-max-width
+							mixin preferencesItem(image, text)
+								.preferences-item
+									.preferences-item__icon
+										img.preferences-item__icon-value(src="" + image + "" alt="")
+									p.preferences-item__text= text
+							+preferencesItem('img/preferences-item-1.jpg', 'Хореография')
+							+preferencesItem('img/preferences-item-1.png', 'Музыка')
+							+preferencesItem('img/preferences-item-1.jpg', 'Основы математики')
+							+preferencesItem('img/preferences-item-1.jpg', 'Хореография')
+							+preferencesItem('img/preferences-item-1.jpg', 'Хореография')
+							.preferences-item
+								.preferences-item__icon
+									img.preferences-item__icon-value.value-is-icon(src="img/preferences-item-3.png" alt="")
+								p.preferences-item__text Основы математики
+						.block-catalog-tag-details
+							.catalog-tag-detail-title
+								| Инфраструктура
+							.catalog-tag-detail-wrapper
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Видеонаблюдение
+								a.catalog-tag-detail(href="#") Игровая площадка
+								a.catalog-tag-detail(href="#") Логопед
+								a.catalog-tag-detail(href="#") Педиатр
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+								a.catalog-tag-detail(href="#") Басейн
+						.block-catalog-tag-details
+							.catalog-tag-detail-title
+								| Предметы
+							.catalog-tag-detail-wrapper
+								a.catalog-tag-detail(href="#") Английский язык
+								a.catalog-tag-detail(href="#") Кулинария
+								a.catalog-tag-detail(href="#") Игровая площадка
+						.block-catalog-price
+							p.block-catalog-price__title Стоимость абонемента:
+							.block-catalog-price__item
+								.block-catalog-price__num-holder
+									.block-catalog-price__num
+										.block-catalog-price__num-big 11 440
+										.block-catalog-price__num-currency грн/месяц
+									.block-catalog-price__num-info
+										.block-catalog-price__num-info-item
+											| Внесок за рік.
+											span.span-divider -
+											| 2000 грн.
+										.block-catalog-price__num-info-item
+											| За харчування в місяць.
+											span.span-divider -
+											| 800 грн.
+								.block-catalog-price__btn-detail-holder
+									a.block-catalog-price__btn-detail.btn.btn_gray(href="catalogPage__price.html") Подробнее о цене
+									.block-catalog-price__btn-detail-info
+										span.span-divider *
+										| Полное описание вы можете<br>прочитать в разделе "Цена"
+						.block-catalog-actions.page-catalog-content-devider
+							.block-catalog-action-list
+								.block-catalog-action
+									.block-catalog-action__icon
+										+i('percent', 'svg-action-icon')
+									.block-catalog-action__text
+										.block-catalog-action__title-small - Приведи друга!
+										.block-catalog-action__title 10% скидка
+								.block-catalog-action
+									.block-catalog-action__icon
+										+i('percent', 'svg-action-icon')
+									.block-catalog-action__text
+										.block-catalog-action__title-small - Приведи друга!
+										.block-catalog-action__title 10% скидка
+
+
+
+					.page__sidebar
+						h3.block-title.block-title--messages-small
+							| Проверенные отзывы
+							small.block-title-light
+								span.block-title-sign-divider -
+								a(href="catalogPage__reviews.html") 2312 отзыва
+						.messages.messages-small
+							.messages__list
+								.messages__item
+									.messages__ava
+										img.messages__pic(src="img/ava-chat-1.jpg" alt="")
+										.messages__ava-abs.bg-recommend
+											+i('thumbs-up', 'svg-messages-ava-abs')
+									.messages__details
+										.messages__head
+											.messages__name Бобров Давид
+											.messages__time 12 дней назад
+										.messages__body
+											p.messages__text.js-read-more
+												| Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям! Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!
+								.messages__item.item-reply
+									.messages__ava
+										img.messages__pic(src="img/ava-chat-answer.jpg" alt="")
+									.messages__details
+										.messages__head
+											.messages__name Детский сад "Джерело Kids"
+											.messages__time 19 дней назад
+										.messages__body
+											p.messages__text.js-read-more
+												| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего  садика.
+								.messages__item
+									.messages__ava
+										img.messages__pic(src="img/ava-chat-2.jpg" alt="")
+										.messages__ava-abs.bg-not-recommend
+											+i('thumbs-down', 'svg-messages-ava-abs')
+									.messages__details
+										.messages__head
+											.messages__name Лебедева Ева
+											.messages__time 18 дней назад
+										.messages__body
+											p.messages__text.js-read-more
+												| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего детского садика.
+								.messages__item
+									.messages__ava
+										img.messages__pic(src="img/ava-chat-3.jpg" alt="")
+										.messages__ava-abs.bg-recommend
+											+i('thumbs-up', 'svg-messages-ava-abs')
+									.messages__details
+										.messages__head
+											.messages__name Шестакова Анфиса
+											.messages__time 18 дней назад
+										.messages__body
+											p.messages__text.js-read-more
+												| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего детского садика.
+								.messages__item
+									.messages__ava
+										img.messages__pic(src="img/ava-chat-4.jpg" alt="")
+										.messages__ava-abs.bg-recommend
+											+i('thumbs-up', 'svg-messages-ava-abs')
+									.messages__details
+										.messages__head
+											.messages__name Терещенко София
+											.messages__time 14 дней назад
+										.messages__body
+											p.messages__text
+												| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего детского садика.
+							.messages-btns.messages-btns--row
+								button.messages-btn.messages-btn-more.btn.btn_gray
+									| Показать больше
+								button.messages-btn.messages-btn-add-own.btn.btn_purple
+									+i('message-square', 'svg-messages-btn')
+									| Написать отзыв
+				.page-catalog-map
+					p.page-catalog__map-value-wrapper
+						span.page-catalog__map-value.dot-divider
+							+i('placeholder', 'svg-map-pin')
+							| Киев, ул. Причальная
+						span.page-catalog__map-value.dot-divider Голосеевский район
+						span.page-catalog__map-value.dot-divider.page-catalog__map-value-metro
+							+i('metro', 'svg-metro')
+							| Академгородок
+					.page-catalog__map-iframe-holder
+						<iframe class="block-iframe page-catalog__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7155760000624!2d30.354277215896396!3d50.465020894195646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ccbfb684cdab%3A0x5aa03561822fab0b!2z0JDQutCw0LTQtdC80LPQvtGA0L7QtNC-0LosINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1608129758214!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				.block-title.block-title--catalog-desc
+					| Описание садика
+					p.block-title-small
+						| Описание садика - Детский сад "Джерело Kids"
+				.block-content.typography.page-catalog__desc
+					p Занятия проводит сертифицированный учитель английского языка. 3-4 года — возраст полноценной социализации и время, когда нужно активно развивать детскую память. В связи с чем занятия по английскому языку в этой группе проходят ежедневно и ребенок уже уверенно различает иностранную речь, запоминает слова, целые выражения, постепенно начинает формулировать простые фразы и предложения.
+					p К каждому ребенку осуществляется индивидуальный подход, учитывая психологические особенности и характер.
+					p Особое внимание уделяется произношению звуков речи. Работу в этом направлении ведет опытный логопед. В возрасте 3-4 лет важно успеть правильно поставить произношение и предупредить логопедические проблемы — это основа успешной учебы в школе.
+				.block-title.block-title--blog
+					| Садики в этом районе
+				.catalog__list
+					+catalogItem('img/blog-item.jpg')
+					+catalogItem('img/blog-item.jpg')
+					+catalogItem('img/blog-item.jpg')
+					+catalogItem('img/blog-item.jpg')
+				.block-seo
+					.block-seo__buttons
+						a(href="#").block-seo-button Детский сад
+						a(href="#").block-seo-button Детский сад
+						a(href="#").block-seo-button Детский сад
+						a(href="#").block-seo-button Детский сад
+				.block-owner
+					p.block-owner__text
+						+i('star')
+						| Хотите внести изменения? <br> Оставьте заявку и наши менеджеры свяжутся с вами
+					a.block-owner__btn.btn.btn_purple.js-popup-open(href="#popup-owner" data-effect="mfp-zoom-in") Вы владелец садика?

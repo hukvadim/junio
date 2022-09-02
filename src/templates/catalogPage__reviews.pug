@@ -1,0 +1,215 @@
+---
+title: Детский сад "Джерело Kids"
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			+pageCatalogTabs('', 'active')
+			.page__slider.page-catalog
+				.tab-catalog-reviews
+					h3.block-title.block-title--catalog-section
+						| Отзывы и вопросы Детский сад "Джерело Kids"
+						small.block-title-light
+							span.block-title-sign-divider -
+							| 2312 отзыва
+					.catalog-reviews-summ
+						.catalog-reviews-summ__big-num.rate-item
+							p.catalog-reviews-summ__num 4.8
+							.rate-stars.rate-stars-select-light.rate-stars-select-light-3
+								+i('star')
+								+i('star')
+								+i('star')
+								+i('star')
+								+i('star')
+							.rate-item-info
+								| 2312 отзыва
+						.details
+							.details__list
+								.details__item
+									.details__head
+										.details__preview.bg-yellow
+											img.details__pic(src="img/folder.svg" alt="")
+										.details__text.caption-sm Обучение и воспитание
+									.details__indicator
+										.details__progress.bg-yellow(style="width: 80%;")
+									.details__rate-sum 4.8
+								.details__item
+									.details__head
+										.details__preview.bg-yellow
+											img.details__pic(src="img/activity.svg" alt="")
+										.details__text.caption-sm Территория и комфорт
+									.details__indicator
+										.details__progress.bg-yellow(style="width: 85%;")
+									.details__rate-sum 4.5
+								.details__item
+									.details__head
+										.details__preview.bg-yellow
+											img.details__pic(src="img/bag.svg" alt="")
+										.details__text.caption-sm Помощь
+									.details__indicator
+										.details__progress.bg-yellow(style="width: 60%;")
+									.details__rate-sum 3.0
+								.details__item
+									.details__head
+										.details__preview.bg-yellow
+											img.details__pic(src="img/chat.svg" alt="")
+										.details__text.caption-sm Кухня
+									.details__indicator
+										.details__progress.bg-yellow(style="width: 100%;")
+									.details__rate-sum 5.0
+					form.chat-form.chat-form-has-val(action="upload.php" method="post" enctype="multipart/form-data")
+						.chat-form__ava.ava
+							img.chat-form__ava-pic.ava__pic(src="img/ava-chat-1.jpg" alt="")
+						.chat-form__body
+							.chat-form__field.field
+								.chat-form__wrap.field__wrap
+									textarea.field__textarea.chat-form__textarea.chat-form-watch-focus.autosize(placeholder="Написать свой отзыв..." maxlength="4000")
+										| Доброго времени суток. Давно хотела оставить свой отзыв о детском клубе, куда ходит моя дочь. Даже не о самом клубе, а о людях, которые там работ
+						a(href="javascript:void();").chat-form__btn.btn-submit.btn-submit-focus-hide.btn.btn_purple
+							+i('send', 'svg-messages-btn')
+							| Написать
+						.chat-form-btns
+							.chat-form-group-row
+								.chat-form-group-item.group-item-main
+									.chat-form-rate-holder
+										.chat-form-rate-item
+											.chat-form-rate-item__label Обучение и воспитание
+											.chat-form-rate-item__select
+												select.select-rate(name='rating-1' autocomplete='off')
+													option(value='1' selected) 1
+													option(value='2' selected) 2
+													option(value='3' selected) 3
+													option(value='4') 4
+													option(value='5') 5
+										.chat-form-rate-item
+											.chat-form-rate-item__label Территория и комфорт
+											.chat-form-rate-item__select
+												select.select-rate(name='rating-2' autocomplete='off')
+													option(value='1' selected) 1
+													option(value='2' selected) 2
+													option(value='3' selected) 3
+													option(value='4') 4
+													option(value='5') 5
+										.chat-form-rate-item
+											.chat-form-rate-item__label Помощь
+											.chat-form-rate-item__select
+												select.select-rate(name='rating-2' autocomplete='off')
+													option(value='1' selected) 1
+													option(value='2' selected) 2
+													option(value='3' selected) 3
+													option(value='4') 4
+													option(value='5') 5
+										.chat-form-rate-item
+											.chat-form-rate-item__label Кухня
+											.chat-form-rate-item__select
+												select.select-rate(name='rating-2' autocomplete='off')
+													option(value='1' selected) 1
+													option(value='2' selected) 2
+													option(value='3' selected) 3
+													option(value='4') 4
+													option(value='5') 5
+									.chat-form-recommend-group
+										.input-recommend-btn
+											input#input-recommend-btn-yes.input-recommend-btn-input(type='radio' name='chat-form-recommend' value='yes' required='')
+											label.input-recommend-btn-label.label-recommend-yes(for='input-recommend-btn-yes')
+												span.input-recommend-btn-icon
+													+i('thumbs-up', 'svg-input-recommend svg-recommend-yes')
+												| Рекомендую
+										.input-recommend-btn
+											input#input-recommend-btn-no.input-recommend-btn-input(type='radio' name='chat-form-recommend' value='no' required='')
+											label.input-recommend-btn-label.label-recommend-no(for='input-recommend-btn-no')
+												span.input-recommend-btn-icon
+													+i('thumbs-down', 'svg-input-recommend svg-recommend-no')
+												| Не рекомендую
+								.chat-form-group-item.group-item-side
+									.chat-form-files-upload
+										.input-gallery-file-upload
+										//- p.input-gallery-file-upload__json(id="uploadfile" type="json")
+									.field__row
+										.field__col
+											input.field__input(type="text" name="name" placeholder="ФИО")
+										.field__col
+											input.field__input(type="email" name="email" placeholder="Email")
+							.chat-form-group-row.group-row-btns
+								.chat-form-group-item.group-item-side
+									p.chat-form-btn-info
+										span.block-text
+											span.span-divider *
+											| Отзывы на сайте могут оставлять только клиенты, побывавшие на приеме.<br>Это исключает публикацию заказных и неправдивых отзывов.
+								.chat-form-group-item.group-item-main
+									.chat-form-group-item.group-item-main.group-item-btns
+										button.chat-form__btn.btn-submit.btn-submit-full-width.btn.btn_purple
+											+i('send', 'svg-messages-btn')
+											| Отправить
+										a.chat-form__btn.btn-cancel.btn.btn_gray(href="#")
+											+i('x-octagon', 'svg-cancel-btn')
+											| Отменить
+					.messages
+						.messages__list
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-chat-1.jpg" alt="")
+									.messages__ava-abs.bg-recommend
+										+i('thumbs-up', 'svg-messages-ava-abs')
+								.messages__details
+									.messages__head
+										.messages__name Бобров Давид
+										.messages__time 12 дней назад
+										.messages__rate
+											.rate-stars.rate-stars-select-5
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+									.messages__body
+										p.messages__text
+											| Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!
+											span.messages__status.status-green
+												+i('check-circle', 'svg-messages-status')
+												| Подтвержден
+							.messages__item.item-reply
+								.messages__ava
+									img.messages__pic(src="img/ava-chat-answer.jpg" alt="")
+								.messages__details
+									.messages__head
+										.messages__name Детский сад "Джерело Kids"
+										.messages__time 19 дней назад
+										.messages__rate
+											.rate-stars.rate-stars-select-3
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+									.messages__body
+										p.messages__text Очень хочется сказать много добрых слов и слов благодарности в адрес нашего  садика.
+							.messages__item.item-status-opacity
+								.messages__ava
+									img.messages__pic(src="img/ava-chat-2.jpg" alt="")
+									.messages__ava-abs.bg-not-recommend
+										+i('thumbs-down', 'svg-messages-ava-abs')
+								.messages__details
+									.messages__head
+										.messages__name Лебедева Ева
+										.messages__time 18 дней назад
+										.messages__rate
+											.rate-stars.rate-stars-select-3
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+									.messages__body
+										p.messages__text
+											| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего детского садика.
+											span.messages__status.status-red
+												+i('eye', 'svg-messages-status')
+												| На проверке
+					.messages-btns
+						button.messages-btn.btn.btn_purple
+							+i('refresh-cw', 'svg-messages-btn')
+							| Показать больше

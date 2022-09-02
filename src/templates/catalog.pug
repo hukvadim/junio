@@ -1,0 +1,245 @@
+---
+title: Каталог
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			.page__slider
+				.page__header
+					.page__header-title.h2 Детские сады Киева
+					.page__header-note Где в Киеве легче устроить ребенка в сад? Junio анализирует детсадов в микрорайонах столицы.
+				.catalog
+					.page-filter.js-filter-form
+						form.page-filter-holder-form
+							.page-filter-header
+								.page-filter-header__text
+									p.page-filter-header__title Поиск детских садов Киева
+								.page-filter-header__btns
+									a.filter-header-btn.page-filter-hide.js-filter-form-remove-show Скрыть поиск
+							.page-filter-form
+								.page-filter-form-box.page-filter-form-box--search
+									input.field__input.js-watch-focus(type="text" data-focus-block=".page-filter-form-box--search" data-focus-active="hasfocus" placeholder="Название улица, район, метро")
+									button.btn.page-filter-form-box--search-submit
+										+i('search', 'btn-search-icon')
+										| Искать
+								.page-filter-form-box.page-filter-form-box--general.js-filter-form-add-show
+									+i('filter', 'filter-general')
+									span.page-filter-form-box-label Доп. фильтры
+							.page-filter-general
+								p.page-filter-general-box-label Категория
+								#services2.page-filter-general-box
+									ul.page-filter-general-box__list.list
+											li.limitation-list__item.filter-search-list__list-item
+												.checkboxv2
+													input#filter-category-1(name='service-1' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-category-1') Государственный
+											li.limitation-list__item.filter-search-list__list-item(data-name='Частный')
+												.checkboxv2
+													input#filter-category-2(name='service-2' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-category-2') Частный
+								p.page-filter-general-box-label Район
+								#search-1.page-filter-general-box
+									.page-filter-general-box__search
+										input.field__input.page-filter-general-box__search-input.search(data-for='#search-1' placeholder='Найти район')
+										+i('commit', 'search-commit')
+									.page-filter-general-box__list-wrapper
+										ul#filter-district-list.page-filter-general-box__list.list
+											li.limitation-list__item.filter-search-list__list-item(data-name='Голосеевский')
+												.checkboxv2
+													input#filter-district--1(name='service-1' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--1') Голосеевский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Дарницкий')
+												.checkboxv2
+													input#filter-district--2(name='service-2' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--2') Дарницкий
+											li.limitation-list__item.filter-search-list__list-item(data-name='Деснянский')
+												.checkboxv2
+													input#filter-district--3(name='service-3' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--3') Деснянский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Днепровский')
+												.checkboxv2
+													input#filter-district--4(name='service-4' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--4') Днепровский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Оболонский')
+												.checkboxv2
+													input#filter-district--5(name='service-5' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--5') Оболонский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Печерский')
+												.checkboxv2
+													input#filter-district--6(name='service-6' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--6') Печерский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Подольский')
+												.checkboxv2
+													input#filter-district--7(name='service-7' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--7') Подольский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Святошинский')
+												.checkboxv2
+													input#filter-district--8(name='service-8' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--8') Святошинский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Соломенский')
+												.checkboxv2
+													input#filter-district--9(name='service-9' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--9') Соломенский
+											li.limitation-list__item.filter-search-list__list-item(data-name='Шевченковский')
+												.checkboxv2
+													input#filter-district--10(name='service-10' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-district--10') Шевченковский
+								p.page-filter-general-box-label Станция метро
+								#search-2.page-filter-general-box
+									.page-filter-general-box__search
+										input.field__input.page-filter-general-box__search-input.search(data-for='#search-2' placeholder='Станция метро')
+										+i('commit', 'search-commit')
+									.page-filter-general-box__list-wrapper
+										ul#filter-metro-list.page-filter-general-box__list.list
+											li.limitation-list__item.filter-search-list__list-item(data-name='Вокзальная')
+												.checkboxv2
+													input#filter-metro--1(name='service-1' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--1') Вокзальная
+											li.limitation-list__item.filter-search-list__list-item(data-name='Печерская')
+												.checkboxv2
+													input#filter-metro--2(name='service-2' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--2') Печерская
+											li.limitation-list__item.filter-search-list__list-item(data-name='Университет')
+												.checkboxv2
+													input#filter-metro--3(name='service-3' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--3') Университет
+											li.limitation-list__item.filter-search-list__list-item(data-name='Арсенальная')
+												.checkboxv2
+													input#filter-metro--4(name='service-4' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--4') Арсенальная
+											li.limitation-list__item.filter-search-list__list-item(data-name='Святошин')
+												.checkboxv2
+													input#filter-metro--5(name='service-5' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--5') Святошин
+											li.limitation-list__item.filter-search-list__list-item(data-name='Площадь Льва Толстого')
+												.checkboxv2
+													input#filter-metro--6(name='service-6' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--6') Площадь Льва Толстого
+											li.limitation-list__item.filter-search-list__list-item(data-name='Почтовая площадь')
+												.checkboxv2
+													input#filter-metro--7(name='service-7' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--7') Почтовая площадь
+											li.limitation-list__item.filter-search-list__list-item(data-name='Голосеевская')
+												.checkboxv2
+													input#filter-metro--8(name='service-8' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--8') Голосеевская
+											li.limitation-list__item.filter-search-list__list-item(data-name='Золотые ворота')
+												.checkboxv2
+													input#filter-metro--8(name='service-8' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--8') Золотые ворота
+											li.limitation-list__item.filter-search-list__list-item(data-name='Осокорки')
+												.checkboxv2
+													input#filter-metro--8(name='service-8' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--8') Осокорки
+											li.limitation-list__item.filter-search-list__list-item(data-name='Демиевская')
+												.checkboxv2
+													input#filter-metro--9(name='service-9' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--9') Демиевская
+											li.limitation-list__item.filter-search-list__list-item(data-name='Васильковская')
+												.checkboxv2
+													input#filter-metro--10(name='service-10' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--10') Васильковская
+											li.limitation-list__item.filter-search-list__list-item(data-name='Сырец')
+												.checkboxv2
+													input#filter-metro--11(name='service-11' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--11') Сырец
+											li.limitation-list__item.filter-search-list__list-item(data-name='Контрактовая площадь')
+												.checkboxv2
+													input#filter-metro--12(name='service-12' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--12') Контрактовая площадь
+											li.limitation-list__item.filter-search-list__list-item(data-name='Почайна')
+												.checkboxv2
+													input#filter-metro--13(name='service-13' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--13') Почайна
+											li.limitation-list__item.filter-search-list__list-item(data-name='Нивки')
+												.checkboxv2
+													input#filter-metro--14(name='service-14' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--14') Нивки
+											li.limitation-list__item.filter-search-list__list-item(data-name='Выставочный центр')
+												.checkboxv2
+													input#filter-metro--15(name='service-15' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--15') Выставочный центр
+											li.limitation-list__item.filter-search-list__list-item(data-name='Дорогожичи')
+												.checkboxv2
+													input#filter-metro--16(name='service-16' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--16') Дорогожичи
+											li.limitation-list__item.filter-search-list__list-item(data-name='Берестейская')
+												.checkboxv2
+													input#filter-metro--17(name='service-17' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='filter-metro--17') Берестейская
+								p.page-filter-general-box-label Инфраструктура
+								#services2.page-filter-general-box
+									ul#limitation-list--1.page-filter-general-box__list.list
+											li.limitation-list__item.filter-search-list__list-item(data-name='Анестезия')
+												.checkboxv2
+													input#services-list-item--1(name='service-1' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--1') Анестезия
+											li.limitation-list__item.filter-search-list__list-item(data-name='Хирургические операции')
+												.checkboxv2
+													input#services-list-item--2(name='service-2' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--2') Хирургические операции
+											li.limitation-list__item.filter-search-list__list-item(data-name='Акушерство и гинекология')
+												.checkboxv2
+													input#services-list-item--3(name='service-3' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--3') Акушерство и гинекология
+											li.limitation-list__item.filter-search-list__list-item(data-name='null')
+												.checkboxv2
+													input#services-list-item--4(name='service-4' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--4') Вызов врача на дом
+											li.limitation-list__item.filter-search-list__list-item(data-name='Вызов врача на дом')
+												.checkboxv2
+													input#services-list-item--5(name='service-5' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--5') Вызов врача на дом
+											li.limitation-list__item.filter-search-list__list-item(data-name='Дрессура')
+												.checkboxv2
+													input#services-list-item--6(name='service-6' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--6') Дрессура
+											li.limitation-list__item.filter-search-list__list-item(data-name='Лаборатория')
+												.checkboxv2
+													input#services-list-item--7(name='service-7' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--7') Лаборатория
+											li.limitation-list__item.filter-search-list__list-item(data-name='Лабораторная диагностика')
+												.checkboxv2
+													input#services-list-item--8(name='service-8' type='checkbox')
+													label.checkboxv2__label.add-check-icon(for='services-list-item--8') Лабораторная диагностика
+								.page-filter-general__btns
+									button.page-filter-general__btn-submit.btn.btn_purple Применить
+
+						.page-filter__active
+							a.page-filter__active-tag(href="#") Цена от 2000 грн
+							a.page-filter__active-tag(href="#") Оболонський р-н
+							a.page-filter__active-tag.page-filter__active-tag-remove(href="#") Очистить
+					.catalog__row
+						.catalog__container
+							.catalog__list
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								.banners-catalog.banners-catalog--in-list
+									a(href="#").banner-item.banner-default.img-cover
+										img(src="img/banner.jpg")
+									a(href="#").banner-item.banner-default.img-cover
+										img(src="img/banner.jpg")
+									a(href="#").banner-item.banner-default.img-cover
+										img(src="img/banner.jpg")
+									a(href="#").banner-item.banner-default.img-cover
+										img(src="img/banner.jpg")
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+							.catalog__btns
+								+pagination()
+								button.catalog__btn.btn.btn_gray Показать больше
+							.seo-text.typography
+								p Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям! Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!
+
+								

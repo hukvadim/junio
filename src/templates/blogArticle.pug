@@ -1,0 +1,207 @@
+---
+title: Пошук
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('','', 'active')
+		.page__wrapper
+			+header
+			.page__center.page-blog-article
+				.player
+					.player__head
+						.player__box
+							.player__desc
+								.player__stat
+									.player__stage.h5 Детские сады
+									.player__playlist
+										button.player__burger
+										.player__wrap
+											.player__top.h5 Детские сады
+											.player__group
+												a.player__game.active(href="#")
+													.player__text Категорія блогу
+												a.player__game(href="#")
+													.player__text Call of Duty®
+												a.player__game(href="#")
+													.player__text Fortnite®
+												a.player__game(href="#")
+													.player__text League of Legends®
+												a.player__game(href="#")
+													.player__text Call of Duty®
+												a.player__game(href="#")
+													.player__text Fortnite®
+								h1.player__title.h2 Вогонь нам треба знати,з ним не жартують
+								h4.player__note Наш власний ігровий майданчик – це місце, де діти з радістю пізнають світ, що їх оточує
+						//-.player__options
+							a.player__option(href="#")
+								+i('share')
+								| Поділитися
+				.block-content.typography
+					p Занятия проводит сертифицированный учитель английского языка. 3-4 года — возраст полноценной социализации и время, когда нужно активно развивать детскую память. В связи с чем занятия по английскому языку в этой группе проходят ежедневно и ребенок уже уверенно различает иностранную речь, запоминает слова, целые выражения, постепенно начинает формулировать простые фразы и предложения.
+					p К каждому ребенку осуществляется индивидуальный подход, учитывая психологические особенности и характер.
+					p У собак, как и у большинства других млекопитающих, нет цветового зрения. Еше в 1909 году, было установил, что собаки цвета не различают, а реагируют только на степень яркости, иначе говоря, страдают дальтонизмом. Позже появились сообщения, что небольшой процент охотничьих собак будто бы могут различать некоторые цвета спектра.
+					p Однако в конце 1969 года в специальной консультации было напечатано разъяснение, из которого следует, что собаки обладают ахроматным зрением и видят окружающий мир только черно-белым. Иначе говоря, цветное изображение они видят в серых тонах. Только интенсивность серого цвета для них будет различной: желтый цвет покажется им светло-серым, оранжевый и синий.
+					iframe(width='560' height='315' src='https://www.youtube.com/embed/JBXyKA9OZq4' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+					p Зрение собаки вообще очень сильно отличается от зрения человека. У них, как и у их предков — волков и вообще у сумеречных и ночных животных, сетчатка состоит преимущественно из палочек. В отличие от человека у собак нет желтого пятна на сетчатке, а значит нет и основной массы воспринимающих цвета колбочек. Этим и объясняется, почему собаки не различают цветов.
+					p
+						img.default-img(src='img/blog__article-img-1.jpg' alt='')
+					p Когда животное прочипировано, в базу данных вносят такие данные:
+					ul
+						li Код микрочипа
+						li Дата чипирования
+						li Вид животного
+						li Порода
+						li Пол
+						li Пасспорт
+					h1 Заголовок h1
+					h2 Заголовок h2
+					h3 Заголовок h3
+					h4 Заголовок h4
+					h5 Заголовок h5
+					h6 Заголовок h6
+					p Данные про животных хранятся в разных базах данных (по региональному признаку). Для начала, нужно определить, в какой базе храниться информация о животном, а потом продолжать поиск в региональной базе.
+					blockquote
+						p Собака – единственное существо на свете, которое любит тебя больше, чем себя
+						p(style='font-size: 14px; color: #666;') - Джош Биллингс
+					h4 Важно
+					p
+						a(href='#') Следите за актуальностью
+						|  информации в базе чипированных животных. Если вы сменили адрес, телефон или другие контактные данные - их следует сразу же обновить в базе.
+					p.alert-text-green Загальний текст в зеленому
+					p.alert-text-blue Загальний текст в синьому
+					p.alert-text-red Загальний текст в червоному
+				//-.trending
+					.trending__row
+						.trending__col
+							.block-content.typography
+								p Занятия проводит сертифицированный учитель английского языка. 3-4 года — возраст полноценной социализации и время, когда нужно активно развивать детскую память. В связи с чем занятия по английскому языку в этой группе проходят ежедневно и ребенок уже уверенно различает иностранную речь, запоминает слова, целые выражения, постепенно начинает формулировать простые фразы и предложения.
+								p К каждому ребенку осуществляется индивидуальный подход, учитывая психологические особенности и характер.
+								p У собак, как и у большинства других млекопитающих, нет цветового зрения. Еше в 1909 году, было установил, что собаки цвета не различают, а реагируют только на степень яркости, иначе говоря, страдают дальтонизмом. Позже появились сообщения, что небольшой процент охотничьих собак будто бы могут различать некоторые цвета спектра.
+								p Однако в конце 1969 года в специальной консультации было напечатано разъяснение, из которого следует, что собаки обладают ахроматным зрением и видят окружающий мир только черно-белым. Иначе говоря, цветное изображение они видят в серых тонах. Только интенсивность серого цвета для них будет различной: желтый цвет покажется им светло-серым, оранжевый и синий.
+								iframe(width='560' height='315' src='https://www.youtube.com/embed/JBXyKA9OZq4' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')
+								p Зрение собаки вообще очень сильно отличается от зрения человека. У них, как и у их предков — волков и вообще у сумеречных и ночных животных, сетчатка состоит преимущественно из палочек. В отличие от человека у собак нет желтого пятна на сетчатке, а значит нет и основной массы воспринимающих цвета колбочек. Этим и объясняется, почему собаки не различают цветов.
+								p
+									img.default-img(src='img/blog__article-img-1.jpg' alt='')
+								p Когда животное прочипировано, в базу данных вносят такие данные:
+								ul
+									li Код микрочипа
+									li Дата чипирования
+									li Вид животного
+									li Порода
+									li Пол
+									li Пасспорт
+								h1 Заголовок h1
+								h2 Заголовок h2
+								h3 Заголовок h3
+								h4 Заголовок h4
+								h5 Заголовок h5
+								h6 Заголовок h6
+								p Данные про животных хранятся в разных базах данных (по региональному признаку). Для начала, нужно определить, в какой базе храниться информация о животном, а потом продолжать поиск в региональной базе.
+								blockquote
+									p Собака – единственное существо на свете, которое любит тебя больше, чем себя
+									p(style='font-size: 14px; color: #666;') - Джош Биллингс
+								h4 Важно
+								p
+									a(href='#') Следите за актуальностью
+									|  информации в базе чипированных животных. Если вы сменили адрес, телефон или другие контактные данные - их следует сразу же обновить в базе.
+								p.alert-text-green Загальний текст в зеленому
+								p.alert-text-blue Загальний текст в синьому
+								p.alert-text-red Загальний текст в червоному
+							.block-seo
+								.block-seo__buttons
+									a(href="#").block-seo-button Детский сад
+									a(href="#").block-seo-button Детский сад
+									a(href="#").block-seo-button Детский сад
+									a(href="#").block-seo-button Детский сад
+							
+						.trending__col
+							.trending__item
+								.trending__title.h6 Детские сады Киева
+								.trending__group
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-1.png" alt="")
+											.trending__desc
+												.trending__man.confirm Unity Gaming 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-2.png" alt="")
+											.trending__desc
+												.trending__man Daniel Brothers 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-3.png" alt="")
+											.trending__desc
+												.trending__man Amazing Channel 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-4.png" alt="")
+											.trending__desc
+												.trending__man.confirm Dash UI8 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-5.png" alt="")
+											.trending__desc
+												.trending__man.confirm Tran Mau Tri Tam 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+								button.trending__btn.btn.btn_gray.btn_wide Discover More
+							.trending__item
+								.trending__title.h6 Trending Games
+								.trending__group
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-1.png" alt="")
+											.trending__details
+												.trending__game Call of Duty®
+												.trending__text The massive free-to-play experience from the world of Modern Warfare.
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-2.png" alt="")
+											.trending__details
+												.trending__game Counter-Strike®
+												.trending__text Counter-Strike is a series of multiplayer first-person shooter video games
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-3.png" alt="")
+											.trending__details
+												.trending__game Fortnite®
+												.trending__text Live tournaments, match highlights, and your favorite pro players all in one place
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-4.png" alt="")
+											.trending__details
+												.trending__game League of Legends® 
+												.trending__text League of Legends is a team-based game with over 140 champions. 
+								button.trending__btn.btn.btn_gray.btn_wide Discover More
+			
+			//-.page__slider
+				.collection
+					.collection__head
+						.collection__title.h5 Детские сады Киева
+				.catalog__row
+					.catalog__container
+						.catalog__list
+							+catalogItem('img/blog-item.jpg')
+							+catalogItem('img/blog-item.jpg')
+							+catalogItem('img/blog-item.jpg')
+							+catalogItem('img/blog-item.jpg')
+								

@@ -1,0 +1,17 @@
+---
+title: 404
+---
+extends layouts/_layout
+block content
+	.page.page-404
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__slider
+				.page__header
+					.page__header-img
+						img(src="img/404.png")
+					.page__header-title.h2 CТРАНИЦА НЕ НАЙДЕНА!
+					.page__header-note К сожалению, данной страницы не существует.<br>Вы можете вернуться назад или начать просмотр с главной страницы.
+					.page__header-btns
+						a.catalog__btn.btn.btn_purple(href="#") На главную

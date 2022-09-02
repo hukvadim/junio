@@ -1,0 +1,107 @@
+---
+title: Головна
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__slider.page-profile-edit
+				.page__header
+					.page__header-title.h2 Редагувати профіль
+					.page__header-note
+						span.val-required.color-red *
+						| Заповніть всі обов’язкові поля, щоб ми оновили Ваш профіль.
+				form.form-style-default(action='/', method='post', enctype='multipart/form-data')
+					.form-body-group
+						p.form-group-title Общая информация
+						.form-group
+							label.form-label
+								.avatar-holder.avatar-with-abs-btn
+									img(src='img/profile.jpg')
+									a(href="#").abs-btn.color-red
+										+i('trash-2')
+							.form-row
+								.col.form-row--inline(style='max-width: 100%;')
+									.upload-button
+										label.button.btn.btn-light(style='margin-bottom: 0;')
+											| Оновити фото
+											input(type='file' name='test')
+									small.form-input-info.near-upload(style="max-width: 335px;") Завантажте зображення більше ніж 200x200 пікселів у форматі .jpg або .png
+								br
+								.form-row--inline
+									.col(style='max-width: 220px;')
+										input.form-control(type='text' name='tmp_name' placeholder='Ім\'я' value="Андрій")
+									.col(style='max-width: 220px;')
+										input.form-control(type='text' name='tmp_name' placeholder='Прізвище' value="Шкраба")
+					.form-body-group
+						p.form-group-title Змінити пароль
+						.form-group
+							label.form-label
+								span Email
+							.form-row
+								.col(style='max-width: 310px;')
+									input.form-control(type='text' name='tmp_name' placeholder='Ім\'я' value="andry255@gmail.com")
+						.form-group
+							label.form-label
+								span Телефон
+							.form-row
+								.col(style='max-width: 310px;')
+									input.form-control(type='text' name='tmp_name' placeholder='Телефон' value="+38 (067) 12 - 34 - 567")
+						.form-group.form-group--notice
+							label.form-label
+								| Чи даєте Ви свою згоду, на оповіщення?
+							.form-row
+								.col(style='max-width: 100%;')
+									label.checkbox.checkbox-col
+										input.checkbox__input(type="checkbox" name="notice_email")
+										span.checkbox__in
+											span.checkbox__tick
+											span.checkbox__text Email
+									label.checkbox.checkbox-col
+										input.checkbox__input(type="checkbox" name="notice_phone")
+										span.checkbox__in
+											span.checkbox__tick
+											span.checkbox__text Телефон
+									.block-icon-left.clearfix.mt-20
+										.block-icon-left__icon.hold-icon-circle
+											+i('info')
+									.block-icon-left__text.form-input-info(style='padding-left: 13px;')
+										| Ці дані будуть використовуватися при оповіщення про нову активність з Вашою участю.<br>Вони не будуть використовуватися публічно.<br>Оберіть навпроти кожного типу контактних даних так або ні. 
+					.form-body-group
+						p.form-group-title Соціальні мережі та сайт
+						.form-body-group-glue
+							.form-group
+								label.form-label
+									span Facebook
+								.form-row
+									.col(style='max-width: 630px;')
+										.input-group
+											.input-group-prepend
+												span.input-group-text.color-facebook
+													+i('facebook', 'svg-fill')
+											input.form-control(type='text' name='tmp_name' placeholder='https://')
+					.form-body-group
+						p.form-group-title Змінити пароль
+						.form-group
+							label.form-label.required-label
+								span Старий пароль
+							.form-row
+								.col(style='max-width: 306px;')
+									input.form-control(type='password' name='tmp_name' minlength='8' placeholder='••••••••••••')
+						.form-group
+							label.form-label
+								span Новий пароль
+							.form-row
+								.col(style='max-width: 306px;')
+									input.form-control(type='password' name='tmp_name' minlength='8' placeholder='••••••••••••')
+						.form-group
+							label.form-label
+								span Новий пароль ще раз
+							.form-row
+								.col(style='max-width: 306px;')
+									input.form-control(type='password' name='tmp_name' minlength='8' placeholder='••••••••••••')
+					.form-footer
+						button.button.btn.btn_purple.form-btn-submit(type='submit') Оновити профіль
+						a.form-btn-del-profile.animate(href='#') Видалити профіль

@@ -1,0 +1,96 @@
+---
+title: Головна
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page-profile
+				.page__header.page__slider.page-profile__header
+					.page-profile-header__text
+						.profile-base
+							.avatar-base
+								svg.avatar-base-img(width='95' height='95' viewBox='0 0 80 80')
+									image(width='80' height='80' mask='url(#avatar)' xlink:href='img/profile.jpg')
+							.profile-base__text
+								.profile-base__status Статус: Менеджер садочку
+								.profile-base__name Андрій Шкраба
+					.page-profile-header__btns
+						a.btn.btn_purple(href="profile_edit.html") Редактировать
+				.page-catalog-tabs
+					.page-catalog-tabs__menu
+						a.page-catalog-tabs__item(href="profile_manager.html" class="active")
+							span.page-catalog-tabs__text Відгуки
+						a.page-catalog-tabs__item(href="profile_garden.html")
+							span.page-catalog-tabs__text Мої садочки
+						a.page-catalog-tabs__item(href="profile_edit.html")
+							span.page-catalog-tabs__text Редактировать
+				.profile-tab-reviews.page__slider
+					h3.block-title.block-title--messages-small
+						| Нові відгуки
+						small.block-title-light
+							span.block-title-sign-divider -
+							a(href="catalogPage__reviews.html") 2312 отзыва
+					.messages.messages-small
+						.messages__list
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-chat-1.jpg" alt="")
+									.messages__ava-abs.bg-recommend
+										+i('thumbs-up', 'svg-messages-ava-abs')
+								.messages__details
+									.messages__head
+										.messages__name Бобров Давид
+										.messages__time 12 дней назад
+										.messages__rate
+											.rate-stars.rate-stars-select-5
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+									.messages__body
+										p.messages__text
+											a.messages__text-garden-link(href="#")
+												+i('external-link')
+												| Дитячий садок "Джерело Kids"
+											span.js-read-more
+												| Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям! Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!
+									.messages__btn-holder
+										a.messages__btn.animate.reply(href="#")
+											+i('message-square')
+											| Відповісти
+										a.messages__btn.animate.appeal(href="#")
+											+i('alert-triangle')
+											| Оскаржити
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-chat-4.jpg" alt="")
+									.messages__ava-abs.bg-recommend
+										+i('thumbs-up', 'svg-messages-ava-abs')
+								.messages__details
+									.messages__head
+										.messages__name Бобров Давид
+										.messages__time 12 дней назад
+										.messages__rate
+											.rate-stars.rate-stars-select-5
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+												+i('star')
+									.messages__body
+										p.messages__text
+											| Очень хочется сказать много добрых слов и слов благодарности в адрес нашего детского садика.
+						.messages-btns.messages-btns--row
+							button.messages-btn.messages-btn-more.btn.btn_purple
+								| Показать больше
+					.no-results
+						img.no-results__img(src="img/no-results-reviews.png" width="400")
+						.no-results__text
+							h5.no-results__title
+								| Відгуків не знайдено
+							p.no-results__desc
+								| Користувачі в процесі пошуку вашого садочку і формування думки. <br> На вcі відгуки у вас можливість дати відповідь. Ми вас оповістимо про перший відгук.

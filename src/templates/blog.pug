@@ -1,0 +1,40 @@
+---
+title: Блог
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', 'active')
+		.page__wrapper
+			+header
+			.page__slider
+				.page__header
+					.page__header-title.h2.font-2 Блог сервиса Junio
+					.page__header-note Где в Киеве легче устроить ребенка в сад? Junio анализирует детсадов в микрорайонах столицы.
+				.page__header-tags.trending__tags
+					a(href="#").trending__tag Питание
+					a(href="#").trending__tag Язык преподавания
+					a(href="#").trending__tag Общение
+					a(href="#").trending__tag Всегда требуйте
+					a(href="#").trending__tag Список требований
+				.catalog
+					.catalog__row
+						.catalog__container
+							.catalog__list
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+								+blogItem('img/blog-item.jpg')
+							.catalog__btns
+								button.catalog__btn.btn.btn_gray Показать больше
+
+
+								

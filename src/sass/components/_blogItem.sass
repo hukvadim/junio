@@ -1,0 +1,123 @@
+.blog-item
+	position: relative
+	border-radius: 24px
+	background: $wh
+	cursor: pointer
+	transition: box-shadow .25s
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		left: 7px
+		right: 7px
+		bottom: -15px
+		z-index: -1
+		transition: background .25s 
+		+shadow-sm
+	&__preview
+		position: relative
+		height: 196px
+		border-radius: 24px 24px 0 0
+		transition: opacity .25s
+		display: block
+		overflow: hidden
+		&:hover
+			opacity: 0.75
+		&-img
+			width: 100%
+			height: 100%
+	&__details
+		padding: 26px 26px 7px
+		cursor: default
+	&__title
+		margin-bottom: 15px
+		font-size: 18px
+		line-height: (24/18)
+		font-weight: 500
+		transition: color .25s
+		cursor: pointer
+		display: inline-block
+		color: $bl
+		+ft
+		&:hover
+			color: $blue
+	&__desc
+		color: $gray-light
+		font-size: 12px
+	&__status
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 18px
+		.status
+			+nl
+				margin-right: 20px
+	&__name
+		display: flex
+		align-items: center
+		font-size: 13px
+		font-weight: 700
+	&__logo
+		margin-right: 8px
+		font-size: 0
+	&__logo &__pic
+		max-width: 24px
+		max-height: 24px
+	&__actions
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 49px
+		margin: 24px -24px 0
+		padding: 0 24px
+		border-top: 1px solid $border-light
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: 16px -5px 0
+	&__tag
+		font-size: 12px
+		padding: 4px 5px
+		color: rgba($gray-dark, .73)
+		&:hover
+			color: $purple
+	&__bottom
+		display: flex
+		justify-content: space-between
+		margin: 20px 0
+		cursor: default;
+	&__category
+		margin: 0
+		font-size: 11px
+		line-height: 25px
+		border-radius: 7px
+		padding: 0 13px
+		font-weight: 600
+		opacity: 0.95
+		cursor: pointer
+	&__bookmark 
+
+
++dark
+	.blog-item
+		background: $dark1
+		&:before
+			+shadow-sm-dark
+		&:hover:before
+			background: rgba(#000, .5)
+		&.active
+			box-shadow: 0 0 0 4px rgba($border-light, .1)
+		&__title
+			color: $wh
+		&__preview
+			&:hover
+				opacity: 1
+		&__actions
+			border-color: rgba($border-light, .1)
+		&__category
+			background: $border-dark
+			color: rgba($wh, .5)
+
+
+
+

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Unity Dashboard Kit - Gaming">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ui8">
+    <meta name="twitter:title" content="Unity Dashboard Kit - Gaming">
+    <meta name="twitter:description" content="Ultimate Social Gaming Dashboard Kit">
+    <meta name="twitter:creator" content="@ui8">
+    <meta name="twitter:image" content="https://ui8-unity-gaming.herokuapp.com/img/twitter-card.jpg">
+    <meta property="og:title" content="Unity">
+    <meta property="og:type" content="Article">
+    <meta property="og:url" content="https://ui8-unity-gaming.herokuapp.com/">
+    <meta property="og:image" content="https://ui8-unity-gaming.herokuapp.com/img/fb-og-image.jpg">
+    <meta property="og:description" content="Ultimate Social Gaming Dashboard Kit">
+    <meta property="og:site_name" content="Unity Dashboard Kit - Gaming">
+    <meta property="fb:admins" content="132951670226590">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="css/fonts/TTNorms/TT.css" rel="stylesheet">
+    <link href="lib/lightGallery/css/lightgallery.min.css" rel="stylesheet">
+    <link href="lib/rating/css-stars.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
+if (viewportmeta) {
+  if (screen.width < 375) {
+    var newScale = screen.width / 375;
+    viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+  } else {
+    viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+  }
+}</script>
+  </head>
+  <body>
+    <script>//- console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+		document.body.classList.add("dark");
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.querySelector('.js-switch-theme input').checked = true;
+		});
+}
+</script>
+    <div class="page">
+      <div class="sidebar">
+        <div class="sidebar__top"><a class="sidebar__logo" href="index.html"><img class="sidebar__pic sidebar__pic_black" src="img/logo.png" alt="" /><img class="sidebar__pic sidebar__pic_white" src="img/logo-white.png" alt="" /></a><button class="sidebar__burger"></button><button class="sidebar__close"><svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg></button></div>
+        <div class="sidebar__wrapper">
+          <div class="sidebar__inner">
+            <div class="sidebar__group">
+              <div class="sidebar__caption caption-sm"><span>Основні </span>Розділи</div>
+              <div class="sidebar__menu"><a class="sidebar__item" href="index.html">
+                  <div class="sidebar__icon"><svg class="icon icon-trending ">
+                      <use xlink:href="img/sprite.svg#icon-trending"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Главная</div>
+                </a><a class="sidebar__item active" href="catalog.html">
+                  <div class="sidebar__icon"><svg class="icon icon-location ">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Учреждения</div>
+                </a><a class="sidebar__item" href="blog.html">
+                  <div class="sidebar__icon"><svg class="icon icon-document ">
+                      <use xlink:href="img/sprite.svg#icon-document"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Блог</div>
+                </a><a class="sidebar__item" href="contacts.html">
+                  <div class="sidebar__icon"><svg class="icon icon-email ">
+                      <use xlink:href="img/sprite.svg#icon-email"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Контакты</div>
+                </a><a class="sidebar__item" href="playlist.html">
+                  <div class="sidebar__icon"><svg class="icon icon-wallet ">
+                      <use xlink:href="img/sprite.svg#icon-wallet"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Реклама</div>
+                </a></div>
+            </div>
+            <div class="sidebar__group">
+              <div class="sidebar__caption caption-sm"><span></span>Користувач</div>
+              <div class="sidebar__menu"><a class="sidebar__item" href="chat.html">
+                  <div class="sidebar__icon"><svg class="icon icon-login ">
+                      <use xlink:href="img/sprite.svg#icon-login"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Зайти</div>
+                  <div class="sidebar__counter">20</div>
+                </a><a class="sidebar__item js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+                  <div class="sidebar__icon"><svg class="icon icon-profile ">
+                      <use xlink:href="img/sprite.svg#icon-profile"></use>
+                    </svg></div>
+                  <div class="sidebar__text">Реєстрація</div>
+                </a></div>
+              <div class="sidebar__menu sidebar__menu--top-links">
+                <div class="sidebar__item sidebar__item--town js-dropdown-item" href="#">
+                  <div class="sidebar__icon"><svg class="icon icon-location ">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg></div>
+                  <div class="sidebar__text dropdown-arrow-padding">Киев<svg class="icon icon-arrow-down dropdown-arrow">
+                      <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                    </svg></div>
+                  <div class="dropdown-body add-max"><a class="dropdown-body-link" href="#">Черновцы</a><a class="dropdown-body-link" href="#">Днепропетровск</a><a class="dropdown-body-link" href="#">Донецк</a><a class="dropdown-body-link" href="#">Ивано-Франковск</a><a class="dropdown-body-link" href="#">Каменец-Подольский</a><a class="dropdown-body-link" href="#">Харьков</a><a class="dropdown-body-link" href="#">Херсон</a><a class="dropdown-body-link" href="#">Киев</a><a class="dropdown-body-link" href="#">Кривой Рог</a><a class="dropdown-body-link" href="#">Луганск</a><a class="dropdown-body-link" href="#">Львов</a><a class="dropdown-body-link" href="#">Николаев</a><a class="dropdown-body-link" href="#">Одесса</a></div>
+                </div>
+                <div class="sidebar__item">
+                  <div class="sidebar__icon"><svg class="icon icon-edit-3 ">
+                      <use xlink:href="img/sprite.svg#icon-edit-3"></use>
+                    </svg></div>
+                  <div class="sidebar__text lang-items"><a class="lang-item" href="#">Укр</a><a class="lang-item active" href="#">Рус</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__banner">
+            <div class="sidebar__bg" style="background-image: url('img/sidebar-banner.png');"></div><button class="sidebar__remove"><svg class="icon icon-remove ">
+                <use xlink:href="img/sprite.svg#icon-remove"></use>
+              </svg></button>
+            <div class="sidebar__details">
+              <div class="sidebar__title h5">Join the  Unity&nbsp;Gaming</div>
+              <div class="sidebar__info caption-sm">Discover the best live streams anywhere.</div><button class="sidebar__btn btn btn_purple btn_wide">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__bottom"><label class="switch switch_theme js-switch-theme"><input class="switch__input" type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg class="icon icon-moon ">
+                  <use xlink:href="img/sprite.svg#icon-moon"></use>
+                </svg><svg class="icon icon-sun ">
+                  <use xlink:href="img/sprite.svg#icon-sun"></use>
+                </svg></span></span></label><a class="sidebar__download" href="#"><svg class="icon icon-download ">
+              <use xlink:href="img/sprite.svg#icon-download"></use>
+            </svg></a></div>
+      </div>
+      <div class="page__wrapper">
+        <div class="header"><button class="header__burger"></button>
+          <div class="header__item header__item_town js-header-item">
+            <div class="header__head js-header-head"><svg class="icon icon-location ">
+                <use xlink:href="img/sprite.svg#icon-location"></use>
+              </svg>Киев<svg class="icon icon-arrow-down ">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg></div>
+            <div class="header__body"><a class="header__link" href="#">Черновцы</a><a class="header__link" href="#">Днепропетровск</a><a class="header__link" href="#">Донецк</a><a class="header__link" href="#">Ивано-Франковск</a><a class="header__link" href="#">Каменец-Подольский</a><a class="header__link" href="#">Харьков</a><a class="header__link" href="#">Херсон</a><a class="header__link" href="#">Киев</a><a class="header__link" href="#">Кривой Рог</a><a class="header__link" href="#">Луганск</a><a class="header__link" href="#">Львов</a><a class="header__link" href="#">Николаев</a><a class="header__link" href="#">Одесса</a></div>
+          </div>
+          <form class="header__search" action="search.html"><input class="header__input" type="text" placeholder="Искать..." /><button class="header__btn-search"><svg class="icon icon-search ">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg></button></form>
+          <div class="header__control"><a class="header__head header__item_lang d-hide" href="#" style="display: none;">Киев</a><a class="header__item header__item_search" href="#"><svg class="icon icon-search ">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg></a>
+            <div class="header__lang">
+              <div class="lang-items"><a class="lang-item" href="#">Укр</a><a class="lang-item active" href="#">Рус</a></div>
+            </div>
+            <div class="header__item header__item_notifications js-header-item"><button class="header__head js-header-head"><svg class="icon icon-bell ">
+                  <use xlink:href="img/sprite.svg#icon-bell"></use>
+                </svg>
+                <div class="header__counter">2</div>
+              </button>
+              <div class="header__body js-header-body">
+                <div class="notifications">
+                  <div class="notifications__info h6">Recent Notification</div>
+                  <div class="notifications__list"><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-1.png" alt="" />
+                        <div class="notifications__status bg-blue"><img class="notifications__pic" src="img/chat.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Sarah Saunders</div>
+                          <div class="notifications__time">8h</div>
+                        </div>
+                        <div class="notifications__text">Commented on <span class="notifications__project">The Results Are Beautif</span></div>
+                      </div>
+                    </a><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-2.png" alt="" />
+                        <div class="notifications__status bg-blue"><img class="notifications__pic" src="img/chat.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Glenn Greer</div>
+                          <div class="notifications__time">12h</div>
+                        </div>
+                        <div class="notifications__text">Commented on <span class="notifications__project">Your Latest Video</span></div>
+                      </div>
+                    </a><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-3.png" alt="" />
+                        <div class="notifications__status bg-blue"><img class="notifications__pic" src="img/chat.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Sarah Saunders</div>
+                          <div class="notifications__time">13h</div>
+                        </div>
+                        <div class="notifications__text">Commented on <span class="notifications__project">Your Latest Video</span></div>
+                      </div>
+                    </a><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-4.png" alt="" />
+                        <div class="notifications__status bg-green"><img class="notifications__pic" src="img/chat.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Sarah Saunders</div>
+                          <div class="notifications__time">19h</div>
+                        </div>
+                        <div class="notifications__text">Commented on <span class="notifications__project">Your Latest Video</span></div>
+                      </div>
+                    </a><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-2.png" alt="" />
+                        <div class="notifications__status bg-purple"><img class="notifications__pic" src="img/message.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Sarah Saunders</div>
+                          <div class="notifications__time">21h</div>
+                        </div>
+                        <div class="notifications__text">Sent you a message 📪 </div>
+                      </div>
+                    </a><a class="notifications__item" href="#">
+                      <div class="notifications__ava"><img class="notifications__pic" src="img/ava-5.png" alt="" />
+                        <div class="notifications__status bg-orange"><img class="notifications__pic" src="img/heart.svg" alt="" /></div>
+                      </div>
+                      <div class="notifications__details">
+                        <div class="notifications__line">
+                          <div class="notifications__user">Glenn Greer</div>
+                          <div class="notifications__time">24h</div>
+                        </div>
+                        <div class="notifications__text">Liked <span class="notifications__project">Your Latest Video</span></div>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__item header__item_profile"><a class="header__head" href="#"><img class="header__pic" src="img/avatar.png" alt="" /></a>
+            <div class="header__body"><a class="header__link" href="profile.html">
+                <div class="header__img"><svg class="icon icon-profile ">
+                    <use xlink:href="img/sprite.svg#icon-profile"></use>
+                  </svg></div>Профіль
+              </a><a class="header__link" href="profile_edit.html">
+                <div class="header__img"><svg class="icon icon-settings ">
+                    <use xlink:href="img/sprite.svg#icon-settings"></use>
+                  </svg></div>Редагувати
+              </a><a class="header__link" href="#">
+                <div class="header__img"><svg class="icon icon-logout ">
+                    <use xlink:href="img/sprite.svg#icon-logout"></use>
+                  </svg></div>Вийти
+              </a>
+              <hr /><a class="header__link" href="profile_manager.html">
+                <div class="header__img"><svg class="icon icon-trending ">
+                    <use xlink:href="img/sprite.svg#icon-trending"></use>
+                  </svg></div>Відгуки
+              </a><a class="header__link" href="profile_garden.html">
+                <div class="header__img"><svg class="icon icon-document ">
+                    <use xlink:href="img/sprite.svg#icon-document"></use>
+                  </svg></div>Мої садочки
+              </a><a class="header__link" href="profile_material_edit.html">
+                <div class="header__img"><svg class="icon icon-settings ">
+                    <use xlink:href="img/sprite.svg#icon-settings"></use>
+                  </svg></div>Редагувати
+              </a><a class="header__link" href="#">
+                <div class="header__img"><svg class="icon icon-logout ">
+                    <use xlink:href="img/sprite.svg#icon-logout"></use>
+                  </svg></div>Вийти
+              </a></div>
+          </div>
+        </div>
+        <div class="page__slider">
+          <div class="page__header">
+            <div class="page__header-title h2">Детские сады Киева</div>
+            <div class="page__header-note">Где в Киеве легче устроить ребенка в сад? Junio анализирует детсадов в микрорайонах столицы.</div>
+          </div>
+          <div class="catalog">
+            <div class="page-filter js-filter-form">
+              <form class="page-filter-holder-form">
+                <div class="page-filter-header">
+                  <div class="page-filter-header__text">
+                    <p class="page-filter-header__title">Поиск детских садов Киева</p>
+                  </div>
+                  <div class="page-filter-header__btns"><a class="filter-header-btn page-filter-hide js-filter-form-remove-show">Скрыть поиск</a></div>
+                </div>
+                <div class="page-filter-form">
+                  <div class="page-filter-form-box page-filter-form-box--search"><input class="field__input js-watch-focus" type="text" data-focus-block=".page-filter-form-box--search" data-focus-active="hasfocus" placeholder="Название улица, район, метро"><button class="btn page-filter-form-box--search-submit"><svg class="icon icon-search btn-search-icon">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>Искать</button></div>
+                  <div class="page-filter-form-box page-filter-form-box--general js-filter-form-add-show"><svg class="icon icon-filter filter-general">
+                      <use xlink:href="img/sprite.svg#icon-filter"></use>
+                    </svg><span class="page-filter-form-box-label">Доп. фильтры</span></div>
+                </div>
+                <div class="page-filter-general">
+                  <p class="page-filter-general-box-label">Категория</p>
+                  <div class="page-filter-general-box" id="services2">
+                    <ul class="page-filter-general-box__list list">
+                      <li class="limitation-list__item filter-search-list__list-item">
+                        <div class="checkboxv2"><input id="filter-category-1" name="service-1" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-category-1">Государственный</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Частный">
+                        <div class="checkboxv2"><input id="filter-category-2" name="service-2" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-category-2">Частный</label></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="page-filter-general-box-label">Район</p>
+                  <div class="page-filter-general-box" id="search-1">
+                    <div class="page-filter-general-box__search"><input class="field__input page-filter-general-box__search-input search" data-for="#search-1" placeholder="Найти район"><svg class="icon icon-commit search-commit">
+                        <use xlink:href="img/sprite.svg#icon-commit"></use>
+                      </svg></div>
+                    <div class="page-filter-general-box__list-wrapper">
+                      <ul class="page-filter-general-box__list list" id="filter-district-list">
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Голосеевский">
+                          <div class="checkboxv2"><input id="filter-district--1" name="service-1" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--1">Голосеевский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Дарницкий">
+                          <div class="checkboxv2"><input id="filter-district--2" name="service-2" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--2">Дарницкий</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Деснянский">
+                          <div class="checkboxv2"><input id="filter-district--3" name="service-3" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--3">Деснянский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Днепровский">
+                          <div class="checkboxv2"><input id="filter-district--4" name="service-4" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--4">Днепровский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Оболонский">
+                          <div class="checkboxv2"><input id="filter-district--5" name="service-5" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--5">Оболонский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Печерский">
+                          <div class="checkboxv2"><input id="filter-district--6" name="service-6" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--6">Печерский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Подольский">
+                          <div class="checkboxv2"><input id="filter-district--7" name="service-7" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--7">Подольский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Святошинский">
+                          <div class="checkboxv2"><input id="filter-district--8" name="service-8" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--8">Святошинский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Соломенский">
+                          <div class="checkboxv2"><input id="filter-district--9" name="service-9" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--9">Соломенский</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Шевченковский">
+                          <div class="checkboxv2"><input id="filter-district--10" name="service-10" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-district--10">Шевченковский</label></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="page-filter-general-box-label">Станция метро</p>
+                  <div class="page-filter-general-box" id="search-2">
+                    <div class="page-filter-general-box__search"><input class="field__input page-filter-general-box__search-input search" data-for="#search-2" placeholder="Станция метро"><svg class="icon icon-commit search-commit">
+                        <use xlink:href="img/sprite.svg#icon-commit"></use>
+                      </svg></div>
+                    <div class="page-filter-general-box__list-wrapper">
+                      <ul class="page-filter-general-box__list list" id="filter-metro-list">
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Вокзальная">
+                          <div class="checkboxv2"><input id="filter-metro--1" name="service-1" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--1">Вокзальная</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Печерская">
+                          <div class="checkboxv2"><input id="filter-metro--2" name="service-2" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--2">Печерская</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Университет">
+                          <div class="checkboxv2"><input id="filter-metro--3" name="service-3" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--3">Университет</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Арсенальная">
+                          <div class="checkboxv2"><input id="filter-metro--4" name="service-4" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--4">Арсенальная</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Святошин">
+                          <div class="checkboxv2"><input id="filter-metro--5" name="service-5" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--5">Святошин</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Площадь Льва Толстого">
+                          <div class="checkboxv2"><input id="filter-metro--6" name="service-6" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--6">Площадь Льва Толстого</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Почтовая площадь">
+                          <div class="checkboxv2"><input id="filter-metro--7" name="service-7" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--7">Почтовая площадь</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Голосеевская">
+                          <div class="checkboxv2"><input id="filter-metro--8" name="service-8" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--8">Голосеевская</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Золотые ворота">
+                          <div class="checkboxv2"><input id="filter-metro--8" name="service-8" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--8">Золотые ворота</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Осокорки">
+                          <div class="checkboxv2"><input id="filter-metro--8" name="service-8" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--8">Осокорки</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Демиевская">
+                          <div class="checkboxv2"><input id="filter-metro--9" name="service-9" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--9">Демиевская</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Васильковская">
+                          <div class="checkboxv2"><input id="filter-metro--10" name="service-10" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--10">Васильковская</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Сырец">
+                          <div class="checkboxv2"><input id="filter-metro--11" name="service-11" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--11">Сырец</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Контрактовая площадь">
+                          <div class="checkboxv2"><input id="filter-metro--12" name="service-12" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--12">Контрактовая площадь</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Почайна">
+                          <div class="checkboxv2"><input id="filter-metro--13" name="service-13" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--13">Почайна</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Нивки">
+                          <div class="checkboxv2"><input id="filter-metro--14" name="service-14" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--14">Нивки</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Выставочный центр">
+                          <div class="checkboxv2"><input id="filter-metro--15" name="service-15" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--15">Выставочный центр</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Дорогожичи">
+                          <div class="checkboxv2"><input id="filter-metro--16" name="service-16" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--16">Дорогожичи</label></div>
+                        </li>
+                        <li class="limitation-list__item filter-search-list__list-item" data-name="Берестейская">
+                          <div class="checkboxv2"><input id="filter-metro--17" name="service-17" type="checkbox"><label class="checkboxv2__label add-check-icon" for="filter-metro--17">Берестейская</label></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="page-filter-general-box-label">Инфраструктура</p>
+                  <div class="page-filter-general-box" id="services2">
+                    <ul class="page-filter-general-box__list list" id="limitation-list--1">
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Анестезия">
+                        <div class="checkboxv2"><input id="services-list-item--1" name="service-1" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--1">Анестезия</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Хирургические операции">
+                        <div class="checkboxv2"><input id="services-list-item--2" name="service-2" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--2">Хирургические операции</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Акушерство и гинекология">
+                        <div class="checkboxv2"><input id="services-list-item--3" name="service-3" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--3">Акушерство и гинекология</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="null">
+                        <div class="checkboxv2"><input id="services-list-item--4" name="service-4" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--4">Вызов врача на дом</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Вызов врача на дом">
+                        <div class="checkboxv2"><input id="services-list-item--5" name="service-5" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--5">Вызов врача на дом</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Дрессура">
+                        <div class="checkboxv2"><input id="services-list-item--6" name="service-6" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--6">Дрессура</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Лаборатория">
+                        <div class="checkboxv2"><input id="services-list-item--7" name="service-7" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--7">Лаборатория</label></div>
+                      </li>
+                      <li class="limitation-list__item filter-search-list__list-item" data-name="Лабораторная диагностика">
+                        <div class="checkboxv2"><input id="services-list-item--8" name="service-8" type="checkbox"><label class="checkboxv2__label add-check-icon" for="services-list-item--8">Лабораторная диагностика</label></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="page-filter-general__btns"><button class="page-filter-general__btn-submit btn btn_purple">Применить</button></div>
+                </div>
+              </form>
+              <div class="page-filter__active"><a class="page-filter__active-tag" href="#">Цена от 2000 грн</a><a class="page-filter__active-tag" href="#">Оболонський р-н</a><a class="page-filter__active-tag page-filter__active-tag-remove" href="#">Очистить</a></div>
+            </div>
+            <div class="catalog__row">
+              <div class="catalog__container">
+                <div class="catalog__list">
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="banners-catalog banners-catalog--in-list"><a class="banner-item banner-default img-cover" href="#"><img src="img/banner.jpg"></a><a class="banner-item banner-default img-cover" href="#"><img src="img/banner.jpg"></a><a class="banner-item banner-default img-cover" href="#"><img src="img/banner.jpg"></a><a class="banner-item banner-default img-cover" href="#"><img src="img/banner.jpg"></a></div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                  <div class="catalog-item"><a class="catalog-item__preview" style="background-image: url(img/blog-item.jpg);" href="catalogPage.html"><span class="catalog-item__mark tag-small tag-small-mark">Рекомендуем</span></a>
+                    <div class="catalog-item__details"><a class="catalog-item__rate rate-item" href="#">
+                        <div class="rate-stars rate-stars-select-3"><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg><svg class="icon icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg></div>
+                        <div class="rate-item-info"><span class="rate-item-info-mid">4.8</span><span class="rate-item-info-summ">( 2312 отзывов )</span></div>
+                      </a><a class="catalog-item__title" href="catalogPage.html">Частный Мини-Детсад "Светлячки"</a>
+                      <div class="catalog-item__price-holder">
+                        <div class="catalog-item__price">11 440<div class="catalog-item__price-small">грн/месяц</div>
+                        </div>
+                        <div class="catalog-item__price-info"><span class="divider">-</span>Внесок за рік. 2000 грн.</div>
+                      </div>
+                      <div class="catalog-item__address-holder">
+                        <div class="catalog-item__address item"><svg class="icon icon-placeholder ">
+                            <use xlink:href="img/sprite.svg#icon-placeholder"></use>
+                          </svg>Киев, ул. Причальная, Голосеевский р-н</div>
+                        <div class="catalog-item__address-metro item"><svg class="icon icon-metro ">
+                            <use xlink:href="img/sprite.svg#icon-metro"></use>
+                          </svg>Академгородок</div>
+                      </div>
+                      <div class="catalog-item__icon-holder"><img class="catalog-item__icon" src="img/swimming-pool.png" /><img class="catalog-item__icon" src="img/football-ball.png" /><img class="catalog-item__icon" src="img/towel.png" /></div>
+                      <div class="catalog-item__bottom"><a class="catalog-item__category tag-small tag-small-primary">Частный</a><a class="catalog-item__category tag-small tag-small-green">Лицензия проверена</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__btns">
+                  <div class="pagination"><a class="pagination__next btn btn_transparent disable" href="#">Назад</a>
+                    <div class="pagination__page-list"><a class="pagination__page-num btn btn_transparent active" href="#">1</a><a class="pagination__page-num btn btn_transparent" href="#">2</a><a class="pagination__page-num btn btn_transparent" href="#">3</a><a class="pagination__page-num btn btn_transparent" href="#">4</a><a class="pagination__page-num btn btn_transparent" href="#">5</a></div><a class="pagination__prev btn btn_transparent" href="#">Дальше</a>
+                  </div><button class="catalog__btn btn btn_gray">Показать больше</button>
+                </div>
+                <div class="seo-text typography">
+                  <p>Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям! Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!Дорогой наш воспитатель, огромное сердечное, человеческое Спаси.бо Вам за ваш труд, за любовь к детям!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_owner mfp-hide" id="popup-owner">
+      <form class="popup__form">
+        <div class="popup__title h6">Вы владелец садика?</div>
+        <div class="popup__fieldset">
+          <div class="popup__field field">
+            <div class="field__label">ФИО</div>
+            <div class="field__wrap"><input class="field__input" type="text" name="name"></div>
+          </div>
+          <div class="popup__field field">
+            <div class="field__label">Email</div>
+            <div class="field__wrap"><input class="field__input" type="email" name="email"></div>
+          </div>
+          <div class="popup__field field">
+            <div class="field__label">Телефон</div>
+            <div class="field__wrap"><input class="field__input" type="text" name="Телефон"></div>
+          </div>
+        </div><button class="popup__btn btn btn_purple" type="submit">Отправить запрос</button>
+      </form>
+    </div>
+    <div class="popup popup_settings mfp-hide" id="popup-settings">
+      <form class="popup__form">
+        <div class="popup__title h6">Account Settings</div>
+        <div class="popup__tags"><a class="popup__tag active" href="#">Profile</a><a class="popup__tag" href="#">Password</a><a class="popup__tag" href="#">Email</a><a class="popup__tag" href="#">Notification</a><a class="popup__tag" href="#">Settings</a></div>
+        <div class="popup__field field mobile-show">
+          <div class="field__wrap"><select class="field__select">
+              <option>Your Profile</option>
+              <option>Password</option>
+              <option>Channels</option>
+              <option>Apps</option>
+              <option>Data Export</option>
+            </select></div>
+        </div>
+        <div class="popup__user">
+          <div class="popup__title h6 mobile-show">Your Profile</div>
+          <div class="popup__category caption-sm">Your Avatar</div>
+          <div class="popup__line">
+            <div class="popup__ava"><img class="popup__pic" src="img/avatar.png" alt=""></div>
+            <div class="popup__details">
+              <div class="popup__btns">
+                <div class="popup__loading"><input class="popup__file" type="file"><button class="popup__btn btn btn_purple">Upload New</button></div><button class="popup__btn btn btn_gray">Delete Avatar</button>
+              </div>
+              <div class="popup__text">Avatar help your teammates recognize you in Unity.</div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__fieldset">
+          <div class="popup__row">
+            <div class="popup__field field">
+              <div class="field__label">Your Full Name</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+            <div class="popup__field field">
+              <div class="field__label">Display Name</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__field field">
+              <div class="field__label">Role</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+            <div class="popup__field field">
+              <div class="field__label">Location</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__field field">
+              <div class="field__label">Role</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+            <div class="popup__field field">
+              <div class="field__label">Team</div>
+              <div class="field__wrap"><input class="field__input" type="text"></div>
+            </div>
+          </div>
+          <div class="popup__field field">
+            <div class="field__label">Bio</div>
+            <div class="field__wrap"><textarea class="field__textarea"></textarea></div>
+          </div>
+        </div><button class="popup__btn btn btn_purple" type="submit">Update Profile</button>
+      </form>
+    </div>
+    <div class="popup popup_stories mfp-hide" id="popup-stories">
+      <div class="stories">
+        <div class="stories__container">
+          <div class="stories__slider js-slider-stories">
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+            <div class="stories__slide">
+              <div class="stories__item" style="background-image: url('img/stories-pic.png');">
+                <div class="stories__progress">
+                  <div class="stories__line active"></div>
+                  <div class="stories__line"></div>
+                </div><a class="stories__user" href="#">
+                  <div class="stories__ava"><img class="stories__pic" src="img/ava-1.png" alt=""></div>
+                  <div class="stories__desc">
+                    <div class="stories__man confirm">Tran Mau Tri Tam </div>
+                    <div class="stories__game">Call of Duty</div>
+                    <div class="status orange">2.8K viewers</div>
+                  </div>
+                </a>
+                <form class="stories__form"><input class="stories__input" type="text" placeholder="Send a message…"><button class="stories__btn btn btn_purple">Send</button><button class="stories__smile"><svg class="icon icon-editor-smile ">
+                      <use xlink:href="img/sprite.svg#icon-editor-smile"></use>
+                    </svg></button></form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- Нестандартна фігура для аватарки -->
+    <svg class="null-svg-elements" width="80" height="80" viewBox="0 0 80 80">
+      <defs>
+        <mask id="avatar">
+          <g>
+            <path d="M80,40c0.3,26.9-13.1,40.3-40,40C13.1,80.3-0.3,66.9,0,40C-0.3,13.1,13.1-0.3,40,0C66.9-0.3,80.3,13.1,80,40z" fill="#eeeeee" />
+          </g>
+        </mask>
+      </defs>
+    </svg><!-- scripts-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/svg4everybody.min.js"></script>
+    <script src="lib/jquery.nice-select.min.js"></script>
+    <script src="lib/jquery.magnific-popup.min.js"></script>
+    <script src="lib/slick.min.js"></script>
+    <script src="lib/autosize.min.js"></script>
+    <script src="lib/lightGallery/js/lightgallery.min.js"></script>
+    <script src="lib/rating/jquery.barrating.min.js"></script>
+    <script src="lib/dropzone/aksFileUpload.js"></script>
+    <script src="lib/jquery.collapse.js"></script>
+    <script src="lib/list.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

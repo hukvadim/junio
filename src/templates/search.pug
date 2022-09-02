@@ -1,0 +1,41 @@
+---
+title: Пошук
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__slider.page-search
+				.page__title.h2 Пошук
+				.page__search
+					.page__field
+						input.page__input(type="text" placeholder="Искать...")
+						button.page__open
+							+i('search')
+					.page__btns
+						button.page__btn.btn.btn_purple Искать
+				.catalog
+					.catalog__tags
+						a.catalog__tag(href="catalog.html") Каталог
+						a.catalog__tag(href="blog.html") Блог
+						a.catalog__tag(href="#") Ваши сохранения
+					.catalog__row
+						.catalog__container
+							.catalog__title.h6 Найдено 16 учреждений
+							.catalog__list
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+								+catalogItem('img/blog-item.jpg')
+							.catalog__btns
+								button.catalog__btn.btn.btn_gray Показать больше

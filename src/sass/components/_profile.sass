@@ -1,0 +1,190 @@
+.profile-base
+	+ft
+	display: flex
+	.avatar-base
+	& &__text
+		padding: 11px 0 0 35px
+	& &__status
+		color: #404040
+		font-size: 12px
+	& &__name
+		color: $bl
+		font-size: 38px
+		font-weight: 800
+		padding-top: 3px
+
+
+.profile-tab
+	&-reviews
+		.messages__item
+			margin-bottom: 35px
+		.messages-btns
+			max-width: 300px
+			margin: 50px auto 0
+
+
+.page-profile
+	&-header
+		&__btns
+			display: flex
+			align-items: center
+			margin-top: 20px
+	&__header
+		margin-bottom: 0
+		padding-top: 60px
+		padding-bottom: 50px
+		background-color: rgba($border, .25)
+		display: flex
+		justify-content: space-between
+		+ft
+		.avatar-base
+			&::before
+				height: 101px
+				width: 101px
+	.page-catalog-tabs
+		.page-catalog-tabs__menu
+			justify-content: center
+		.page-catalog-tabs__item
+			font-weight: 500
+
+	.catalog.page__slider
+		padding-top: 23px
+	.catalog__list 
+		.garden
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 calc(25% - 32px);
+			flex: 0 0 calc(25% - 32px);
+			width: calc(25% - 32px);
+			margin: 40px 16px 0;
++dark
+	.page-profile
+		&__header
+			background-color: rgba($border, .07)
+		.profile-base
+			&__status
+				color: rgba($wh, .5)
+			&__name
+				color: $wh
+
+
+
+
+
+
+
+.garden
+	position: relative
+	border-radius: 24px
+	background: $wh
+	cursor: pointer
+	transition: box-shadow .25s  
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		left: 7px
+		right: 7px
+		bottom: -15px
+		z-index: -1
+		+shadow-sm 
+	&.active
+		box-shadow: 0 0 0 4px $blue 
+	&__preview
+		position: relative
+		height: 190px
+		border-radius: 24px 24px 0 0 
+		+cover
+	&.active .checkbox
+		visibility: visible
+		opacity: 1
+	&__details
+		padding: 24px 24px 0
+	&__title
+		margin-bottom: 18px
+		font-size: 18px
+		line-height: (24/18)
+		font-weight: 500
+		transition: color .25s
+		color: $bl
+		&:hover
+			color: $purple
+	&__name
+		display: flex
+		align-items: center
+		font-size: 13px
+		font-weight: 700 
+	&__actions
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 55px
+		margin: 24px -24px 0
+		padding: 0 24px 
+		border-top: 1px solid $border-light  
+		cursor: default
+	&__action
+		font-size: 0
+		width: 36px
+		&.view
+		&.edit
+		&.award
+		&.disabled
+			opacity: .3
+		.icon
+			font-size: 22px
+			color: $gray-dark
+			transition: fill .25s
+			fill: none
+			stroke: currentColor
+			stroke-width: 2.2px
+			width: 21px
+			height: 21px
+			&-eye
+				font-size: 16px
+			&-link
+				font-size: 12px
+		&:hover .icon
+			color: $purple
+		+nl
+			margin-right: auto
+	
+
+body.touch-device .garden .checkbox
+	visibility: visible
+	opacity: 1
+
++dark
+	.garden
+		background: $dark1
+		&__actions
+			border-color: rgba($border-light, .1) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-profile-edit
+	.page__header
+		margin-bottom: 0
+		&-title
+			font-size: 48px
+			letter-spacing: normal
+			margin-bottom: 10px
+		&-note
+			font-size: 18px
+			.val-required
+				padding-right: 8px

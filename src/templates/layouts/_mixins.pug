@@ -1,0 +1,509 @@
+mixin i(name, item = '')
+	svg.icon(class='icon-' + name + ' ' + item)
+		use(xlink:href='img/sprite.svg#icon-' + name)
+
+mixin pageCatalogTabs(item1, item2, item3, item4, item5)
+	.page-catalog-tabs
+		.page-catalog-tabs__menu
+			a.page-catalog-tabs__item(href="catalogPage.html" class=item1)
+				span.page-catalog-tabs__text О садике
+			a.page-catalog-tabs__item(href="catalogPage__reviews.html" class=item2)
+				span.page-catalog-tabs__text Отзывы
+			a.page-catalog-tabs__item(href="catalogPage__price.html" class=item3)
+				span.page-catalog-tabs__text Цена
+			a.page-catalog-tabs__item(href="catalogPage__gallery.html" class=item4)
+				span.page-catalog-tabs__text Галерея
+			a.page-catalog-tabs__item(href="catalogPage__contacts.html" class=item5)
+				span.page-catalog-tabs__text Контакты
+			a.page-catalog-tabs__item.page-catalog-tabs__item-owner.js-popup-open(href="#popup-owner" data-effect="mfp-zoom-in")
+				span.page-catalog-tabs__text Вы владелец? Получить доступ.
+
+
+
+mixin sidebar(item1, item2, item3, item4, item5, item6, item7, item8, item9, classSidebar)
+	.sidebar(class=classSidebar)
+		.sidebar__top
+			a.sidebar__logo(href="index.html")
+				img.sidebar__pic.sidebar__pic_black(src="img/logo.png" alt="")
+				img.sidebar__pic.sidebar__pic_white(src="img/logo-white.png" alt="")
+			button.sidebar__burger
+			button.sidebar__close
+				+i('close')
+		.sidebar__wrapper
+			.sidebar__inner
+				.sidebar__group
+					.sidebar__caption.caption-sm <span>Основні </span>Розділи
+					.sidebar__menu
+						a.sidebar__item(href="index.html" class=item1)
+							.sidebar__icon
+								+i('trending')
+							.sidebar__text Главная
+						a.sidebar__item(href="catalog.html" class=item2)
+							.sidebar__icon
+								+i('location')
+							.sidebar__text Учреждения
+						a.sidebar__item(href="blog.html" class=item3)
+							.sidebar__icon
+								+i('document')
+							.sidebar__text Блог
+						a.sidebar__item(href="contacts.html" class=item4)
+							.sidebar__icon
+								+i('email')
+							.sidebar__text Контакты
+						a.sidebar__item(href="playlist.html" class=item5)
+							.sidebar__icon
+								+i('wallet')
+							.sidebar__text Реклама
+				.sidebar__group
+					.sidebar__caption.caption-sm <span></span>Користувач
+					.sidebar__menu
+						a.sidebar__item(href="chat.html" class=item7)
+							.sidebar__icon
+								+i('login')
+							.sidebar__text Зайти
+							.sidebar__counter 20
+						a.sidebar__item.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in")
+							.sidebar__icon
+								+i('profile')
+							.sidebar__text Реєстрація
+					.sidebar__menu.sidebar__menu--top-links
+						.sidebar__item.sidebar__item--town.js-dropdown-item(href="#")
+							.sidebar__icon
+								+i('location')
+							.sidebar__text.dropdown-arrow-padding
+								| Киев
+								+i('arrow-down', 'dropdown-arrow')
+							.dropdown-body.add-max
+								a.dropdown-body-link(href='#') Черновцы
+								a.dropdown-body-link(href='#') Днепропетровск
+								a.dropdown-body-link(href='#') Донецк
+								a.dropdown-body-link(href='#') Ивано-Франковск
+								a.dropdown-body-link(href='#') Каменец-Подольский
+								a.dropdown-body-link(href='#') Харьков
+								a.dropdown-body-link(href='#') Херсон
+								a.dropdown-body-link(href='#') Киев
+								a.dropdown-body-link(href='#') Кривой Рог
+								a.dropdown-body-link(href='#') Луганск
+								a.dropdown-body-link(href='#') Львов
+								a.dropdown-body-link(href='#') Николаев
+								a.dropdown-body-link(href='#') Одесса
+						.sidebar__item
+							.sidebar__icon
+								+i('edit-3')
+							.sidebar__text.lang-items
+								a.lang-item(href="#") Укр
+								a.lang-item.active(href="#") Рус
+			.sidebar__banner
+				.sidebar__bg(style="background-image: url('img/sidebar-banner.png');")
+				button.sidebar__remove
+					+i('remove')
+				.sidebar__details
+					.sidebar__title.h5 Join the  Unity&nbsp;Gaming
+					.sidebar__info.caption-sm Discover the best live streams anywhere.
+					button.sidebar__btn.btn.btn_purple.btn_wide Join Now
+		.sidebar__bottom
+			label.switch.switch_theme.js-switch-theme
+				input.switch__input(type="checkbox")
+				span.switch__in
+					span.switch__box
+					span.switch__icon
+						+i('moon')
+						+i('sun')
+			a.sidebar__download(href="#")
+				+i('download')
+
+mixin header
+	.header
+		button.header__burger
+		.header__item.header__item_town.js-header-item
+			.header__head.js-header-head
+				+i('location')
+				| Киев
+				+i('arrow-down')
+			.header__body
+				a.header__link(href='#') Черновцы
+				a.header__link(href='#') Днепропетровск
+				a.header__link(href='#') Донецк
+				a.header__link(href='#') Ивано-Франковск
+				a.header__link(href='#') Каменец-Подольский
+				a.header__link(href='#') Харьков
+				a.header__link(href='#') Херсон
+				a.header__link(href='#') Киев
+				a.header__link(href='#') Кривой Рог
+				a.header__link(href='#') Луганск
+				a.header__link(href='#') Львов
+				a.header__link(href='#') Николаев
+				a.header__link(href='#') Одесса
+		form.header__search(action="search.html")
+			input.header__input(type="text" placeholder="Искать...")
+			button.header__btn-search
+				+i('search')
+		.header__control
+			a.header__head.header__item_lang.d-hide(href="#" style="display: none;")
+				| Киев
+			a.header__item.header__item_search(href="#")
+				+i('search')
+			.header__lang
+				.lang-items
+					a.lang-item(href="#") Укр
+					a.lang-item.active(href="#") Рус
+			.header__item.header__item_notifications.js-header-item
+				button.header__head.js-header-head
+					+i('bell')
+					.header__counter 2
+				.header__body.js-header-body
+					.notifications
+						.notifications__info.h6 Recent Notification
+						.notifications__list
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-1.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 8h
+									.notifications__text Commented on <span class="notifications__project">The Results Are Beautif</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-2.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Glenn Greer
+										.notifications__time 12h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-3.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 13h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-4.png" alt="")
+									.notifications__status.bg-green
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 19h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-2.png" alt="")
+									.notifications__status.bg-purple
+										img.notifications__pic(src="img/message.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 21h
+									.notifications__text Sent you a message 📪 
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-5.png" alt="")
+									.notifications__status.bg-orange
+										img.notifications__pic(src="img/heart.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Glenn Greer
+										.notifications__time 24h
+									.notifications__text Liked <span class="notifications__project">Your Latest Video</span>
+		.header__item.header__item_profile
+			a.header__head(href="#")
+				img.header__pic(src="img/avatar.png" alt="")
+			.header__body
+				a.header__link(href='profile.html')
+					.header__img
+						+i('profile')
+					| Профіль
+				a.header__link(href='profile_edit.html')
+					.header__img
+						+i('settings')
+					| Редагувати
+				a.header__link(href='#')
+					.header__img
+						+i('logout')
+					| Вийти
+				hr
+				a.header__link(href='profile_manager.html')
+					.header__img
+						+i('trending')
+					| Відгуки
+				a.header__link(href='profile_garden.html')
+					.header__img
+						+i('document')
+					| Мої садочки
+				a.header__link(href='profile_material_edit.html')
+					.header__img
+						+i('settings')
+					| Редагувати
+				a.header__link(href='#')
+					.header__img
+						+i('logout')
+					| Вийти
+
+
+mixin card(src, title, ava, classStatus, man, game)
+	a.card(href="#")
+		.card__preview
+			img.card__pic(src=src)
+		.card__body
+			.card__title.h6=title
+			.card__user
+				.card__ava
+					img.card__pic(src=ava alt="")
+				.card__desc
+					.card__man(class=classStatus)=man
+					.card__game=game
+		.card__foot
+			.live Live
+			.status.blue 4.2K watching
+
+mixin users(title)
+	.users
+		.users__container
+			.users__info.h6=title 
+			.users__list
+				a.users__item.users__item_add(href="#")
+					.users__add
+						+i('plus')
+					.users__title Add Yours 
+				a.users__item(href="#")
+					.ava.ava_online
+						img.ava__pic(src="img/ava-1.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_play
+						img.ava__pic(src="img/ava-2.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_online-blue
+						img.ava__pic(src="img/ava-3.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_network
+						img.ava__pic(src="img/ava-4.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_network
+						img.ava__pic(src="img/ava-5.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_online
+						img.ava__pic(src="img/ava-1.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_play
+						img.ava__pic(src="img/ava-2.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+
+mixin categories(info)
+	.categories
+		.categories__info.h5=info
+		.categories__list
+			.categories__item.categories__item_big
+				.categories__slider.js-slider-categories
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+									.categories__tag ESport
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+									.categories__tag ESport
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-2.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Fortnite
+					.status.green 4.9K Viewers
+					button.categories__btn.btn.btn_gray Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-3.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Call of Duty
+					.status.green 125K Viewers
+					button.categories__btn.btn.btn_gray Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-4.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Call of Duty
+					.status.green 4.9K Viewers
+					button.categories__btn.btn.btn_gray Follow
+
+mixin gamesItem(src, title, category, classItem)
+	a.games__item(href="#" class=classItem)
+		.games__preview
+			img.games__pic(src=src)
+		.games__details
+			.games__title=title
+			.games__category=category
+			.status.orange 2.8K viewers
+
+mixin game(image, actions)
+	.game
+		.game__preview(style="background-image: url(" + image + ");")
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__in
+					span.checkbox__tick
+			.game__time 10:42
+			.game__line
+				.game__progress(style="width: 65%;")
+		.game__details
+			.game__title The Results Are Now – Call of Duty
+			.game__status
+				.status.blue 8.1M views
+				.status.green 3 months ago
+			.game__name
+				.game__logo
+					img.game__pic(src="img/call-of-duty.png" alt="")
+				.game__text Call of Duty®
+			if actions
+			else
+				.game__actions
+					button.game__action
+						+i('eye')
+					button.game__action
+						+i('link')
+					button.game__action
+						+i('share')
+					button.game__action
+						+i('wand')
+
+
+
+mixin garden(image, actions)
+	.garden
+		.garden__preview(style="background-image: url(" + image + ");")
+		.garden__details
+			a.garden__title(href="catalogPage.html") Частный Мини-Детсад "Светлячки"
+			.garden__actions
+				a.garden__action.view(href="catalogPage.html")
+					+i('eye')
+				a.garden__action.edit(href="profile_material_edit.html")
+					+i('edit')
+				a.garden__action.award.disabled(href="#")
+					+i('award')
+
+
+
+mixin blogItem(image, actions)
+	.blog-item
+		a.blog-item__preview(href="blogArticle.html")
+			img.blog-item__preview-img.img-cover(src="" + image +"")
+		.blog-item__details
+			a.blog-item__title(href="blogArticle.html") Развитие памяти у детей до 6 лет
+			.blog-item__desc.trim-text
+				| Гном Профессор знает, что в дошкольном возрасте происходит интенсивное развитие
+			.blog-item__tags
+				a.blog-item__tag(href="#") #Развитие
+				a.blog-item__tag(href="#") #Интенсивное
+				a.blog-item__tag(href="#") #Возраст
+				a.blog-item__tag(href="#") #Требуйте
+			.blog-item__bottom
+				a.blog-item__category.tag-small.tag-small-primary(href="#") Всегда требуйте
+				a.blog-item__bookmark.btn-transparent.btn-bookmark.bookmark-added(href="#")
+					+i('bookmark', 'svg-bookmark')
+
+mixin catalogItem(image, actions)
+	.catalog-item
+		a.catalog-item__preview(style="background-image: url(" + image + ");" href="catalogPage.html")
+			span.catalog-item__mark.tag-small.tag-small-mark
+				| Рекомендуем
+		.catalog-item__details
+			a(href="#").catalog-item__rate.rate-item
+				.rate-stars.rate-stars-select-3
+					+i('star')
+					+i('star')
+					+i('star')
+					+i('star')
+					+i('star')
+				.rate-item-info
+					span.rate-item-info-mid 4.8
+					span.rate-item-info-summ ( 2312 отзывов )
+			a.catalog-item__title(href="catalogPage.html")
+				| Частный Мини-Детсад "Светлячки"
+			.catalog-item__price-holder
+				.catalog-item__price 11 440
+					.catalog-item__price-small грн/месяц
+				.catalog-item__price-info
+					span.divider -
+					| Внесок за рік. 2000 грн.
+			.catalog-item__address-holder
+				.catalog-item__address.item
+					+i('placeholder')
+					| Киев, ул. Причальная, Голосеевский р-н
+				.catalog-item__address-metro.item
+					+i('metro')
+					| Академгородок
+			.catalog-item__icon-holder
+				img.catalog-item__icon(src="img/swimming-pool.png")
+				img.catalog-item__icon(src="img/football-ball.png")
+				img.catalog-item__icon(src="img/towel.png")
+			.catalog-item__bottom
+				a.catalog-item__category.tag-small.tag-small-primary Частный
+				a.catalog-item__category.tag-small.tag-small-green Лицензия проверена
+
+
+
+mixin pagination()
+	.pagination
+		a.pagination__next.btn.btn_transparent.disable(href="#") Назад
+		.pagination__page-list
+			a.pagination__page-num.btn.btn_transparent.active(href="#") 1
+			a.pagination__page-num.btn.btn_transparent(href="#") 2
+			a.pagination__page-num.btn.btn_transparent(href="#") 3
+			a.pagination__page-num.btn.btn_transparent(href="#") 4
+			a.pagination__page-num.btn.btn_transparent(href="#") 5
+		a.pagination__prev.btn.btn_transparent(href="#") Дальше
+
+		 
+
+
+
+
+
+
+
+

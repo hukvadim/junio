@@ -1,0 +1,25 @@
+.pagination
+	display: flex
+	justify-content: space-between
+	margin-bottom: 30px
+	.btn
+		&.active
+			background-color: $purple
+			color: $wh
+			opacity: 1
+	&__next
+	&__prev
+	&__page-list
+		margin: 0 -5px
+	&__page-num
+		margin: 0 5px
+	&__page-num,
+	&__next,
+	&__prev
+		&:hover
+			color: $text
+			background: rgba($border, .75)
+			border-color: rgba($border, .75)
+			opacity: 1
+		&.disable
+			opacity: .5

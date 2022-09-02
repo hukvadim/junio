@@ -1,0 +1,243 @@
+.field
+	&__label
+		margin-bottom: 16px
+		font-size: 12px
+		line-height: (16/12)
+		font-weight: 500
+		color: $gray-dark
+	&__input,
+	&__textarea
+		width: 100%
+		border-radius: 8px
+		background: rgba($border, .3)
+		border: 2px solid transparent
+		+ft
+		font-size: 14px
+		font-weight: 500
+		color: $text
+		transition: all .25s
+		&:focus
+			border-color: $purple
+			background: $wh
+		+placeholder
+			color: $gray-light
+		+d
+			border-radius: 10px
+	&__input
+		height: 56px
+		padding: 0 22px
+		+placeholder
+			color: $gray-light
+	&__textarea
+		height: 157px
+		padding: 15px 22px
+		resize: none
+	&__select
+		min-width: 100%
+		height: 56px
+		padding: 0 45px 0 24px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		border: none
+		border-radius: 16px
+		background: rgba($border, .5)
+		font-size: 14px
+		font-weight: 600
+		color: $gray-dark
+		transition: all .25s
+		cursor: pointer
+		&::-ms-expand
+			display: none
+		&:-moz-focusring
+			color: transparent
+			text-shadow: 0 0 0 #000
+		&.purple,
+		&.blue
+			color: $wh
+		&.purple
+			background-color: $purple
+		&.blue
+			background-color: $blue
+		+placeholder
+			color: $gray-light
+	&__row
+		display: flex
+		margin: 0 -10px
+		+a
+			margin-left: 0
+			margin-right: 0
+			display: block
+	&__col
+		width: 50%
+		margin: 0 10px
+		+a
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			display: block
+			margin-bottom: 30px
+
+.nice-select
+	float: none
+	line-height: 56px
+	&:after
+		display: none
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		right: 23px
+		width: 14px
+		height: 8px
+		transform: translateY(-50%)
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%2311142d' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E") no-repeat 50% 50% / 14px auto
+		transition: transform .25s
+	.list
+		right: 0
+		margin-top: 6px
+		border-radius: 16px
+		border: 1px solid #F0F3F6
+		box-shadow: 0 5px 20px rgba(#000, .15)
+	.option
+		line-height: 56px
+		padding: 0 15px 0 24px
+		font-weight: 600
+		color: $gray-dark
+		&:hover,
+		&.focus,
+		&.selected.focus
+			background: rgba($border-light, .8)
+			font-weight: 600
+		&.selected
+			color: $blue
+	&.purple:before,
+	&.blue:before
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%23ffffff' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E")
+	&:not(.purple):not(.blue).open
+		background: $wh
+		box-shadow: inset 0 0 0 2px $blue
+	&.open
+		&:before
+			transform: translateY(-50%) rotate(180deg)
+
++dark
+	.field
+		&__input,
+		&__textarea
+			color: $wh
+			background: rgba($border-dark, .07)
+		&__select:not(.purple):not(.blue)
+			background-color: $border-dark
+		.nice-select
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%23ffffff' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E")
+		.list
+			background: $dark1
+			border: 1px solid $border-dark
+		.option
+			&:hover,
+			&.focus,
+			&.selected.focus
+				background: rgba($border-dark, .1)
+				font-weight: 600
+			&.selected
+				color: $wh
+	.nice-select
+		&:before
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%23ffffff' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E") no-repeat 50% 50% / 14px auto
+
+
+.add-check-icon
+	position: relative
+	&:before
+	    content: ''
+	    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat 50% 50% / 8px auto
+	    position: absolute
+	    top: -.4375rem
+	    right: -.4375rem
+	    width: 16px
+	    height: 16px
+	    border-radius: 50%
+	    padding: .1875rem
+	    transition: all .2s ease-in-out
+	    background-color: $purple
+	    border: 1px solid #fff
+	    color: $wh
+	    opacity: 0
+input:checked + .add-check-icon:before
+	opacity: 1
+
+
+.checkboxv2
+	input
+		display: none
+	span,
+	label
+		display: -moz-inline-stack
+		display: inline-block
+		vertical-align: middle
+		*display: inline
+		font-weight: normal
+		cursor: pointer
+		background-color: transparent
+		background-color: #fbfbfb
+		border: 1px solid #ebebeb
+		padding: 8px 10px
+		border-radius: 8px
+		font-size: 13px
+		margin: 5px
+		transition: all .2s
+		line-height: 1
+	.add-check-icon
+		&:before
+			width: 18px
+			height: 18px
+input:checked + .checkboxv2__label
+    color: #fff !important
+    background-color: $purple !important
+    border-color: $purple !important
+
+
+
+.nice-radio
+	position: relative
+	&-holder
+		display: inline-flex
+		background-color: #F7F7F7
+		border-radius: 8px
+	&-input
+		&:checked ~ .nice-radio-label,
+		&:focus ~ .nice-radio-label
+			color: $wh
+			background-color: $purple
+		&:checked
+			& ~ .nice-radio-label
+				&::before
+
+		&:focus
+			& ~ .nice-radio-label
+				&::before
+
+		&[type=checkbox],
+		&[type=radio]
+			position: absolute
+			z-index: -1
+			opacity: 0
+			height: 100%
+	&-label
+		transition: all .2s
+		background-color: #F7F7F7
+	&-label
+		position: relative
+		cursor: pointer
+		border-radius: 8px
+		color: $gray-light
+		display: flex
+		align-items: center
+		padding: 5px 12px
++dark
+	.nice-radio
+		&-label
+			background-color: rgba($border-light, .1)
+			color: rgba($wh, .7)

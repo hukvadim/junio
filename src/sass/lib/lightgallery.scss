@@ -1,0 +1,16 @@
+/* LightGallery */
+.lg-backdrop {
+    background-color: rgba(#000, .62);
+}
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+    border-radius: 8px;
+    margin-top: 0;
+    padding: 38px 18px;
+}
+.lg-actions .lg-next,
+.lg-actions .lg-prev,
+.lg-hide-items .lg-prev,
+.lg-hide-items .lg-prev {
+    transform: translateY(-50%);
+}

@@ -1,0 +1,15 @@
+---
+title: Головна
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__slider.page-index
+				.page__header
+					h1.page__header-title.page-index__title.h2 Ищете детский сад?<br>Выбирайте среди лучших.
+					h4.page__header-note.page-index__note Помогаем найти детсад для вашего ребенка.
+					a.page__header-btn.page-index__btn.btn.btn_purple(href="catalog.html") Найти детский сад
+					img.page__header-img.page-index__img(src="img/main__kids.png")

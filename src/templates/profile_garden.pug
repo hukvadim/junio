@@ -1,0 +1,43 @@
+---
+title: Головна
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page-profile
+				.page__header.page__slider.page-profile__header
+					.page-profile-header__text
+						.profile-base
+							.avatar-base
+								svg.avatar-base-img(width='95' height='95' viewBox='0 0 80 80')
+									image(width='80' height='80' mask='url(#avatar)' xlink:href='img/profile.jpg')
+							.profile-base__text
+								.profile-base__status Статус: Менеджер садочку
+								.profile-base__name Андрій Шкраба
+					.page-profile-header__btns
+						a.btn.btn_purple(href="profile_edit.html") Редактировать
+				.page-catalog-tabs
+					.page-catalog-tabs__menu
+						a.page-catalog-tabs__item(href="profile_manager.html")
+							span.page-catalog-tabs__text Відгуки
+						a.page-catalog-tabs__item(href="profile_ganden.html" class="active")
+							span.page-catalog-tabs__text Мої садочки
+						a.page-catalog-tabs__item(href="profile_edit.html")
+							span.page-catalog-tabs__text Редактировать
+				.catalog.page__slider
+					.catalog__list
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')
+						+garden('img/profile-item.jpg')

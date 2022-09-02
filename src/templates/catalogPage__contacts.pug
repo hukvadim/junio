@@ -1,0 +1,62 @@
+---
+title: Детский сад "Джерело Kids"
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			+pageCatalogTabs('','','','', 'active')
+			.page__slider.page-catalog
+				.tab-catalog-contacts
+					h3.block-title.block-title--catalog-section
+						| Контакты садика Детский сад "Джерело Kids"
+					.block-contacts-catalog
+						.block-contacts-catalog__ava.ava.ava-border-primary
+							img.ava__pic(src="img/ava-manager.jpg" alt="")
+						.block-contacts-catalog__text
+							p.block-contacts-catalog__name Чухрай Анастасия Петровна
+							p.block-contacts-catalog__work Директор / Заведующая
+							p.block-contacts-catalog__phone
+								| Номер нашего садика
+								a.phone.phone-toggle(href="#" data-phone='+38 (067) 70 55 689' data-phone-href='+380677055689')
+									| +38 (067) 70 ...
+									span - Показать
+							.block-contacts-catalog__work-hours.work-hours
+								.block-title-light.work-hours-label
+									| Время работы:
+								.work-hours__item
+									.work-hours__item-week
+										| Пн - Пт
+									.work-hours__item-hours
+										| 12.00 - 18.00
+								.work-hours__item
+									.work-hours__item-week
+										| Сб - Вс
+									.work-hours__item-hours
+										| 13.00 - 15.00
+							a.block-contacts-catalog__btn.btn.btn_purple(href="#") Записаться на экскурсию
+						img.tab-catalog-contacts__abs-img(src="img/contacts-family.png")
+					.page-catalog-map
+						p.page-catalog__map-value-wrapper
+							span.page-catalog__map-value.dot-divider
+								+i('placeholder', 'svg-map-pin')
+								| Киев, ул. Причальная
+							span.page-catalog__map-value.dot-divider Голосеевский район
+							span.page-catalog__map-value.dot-divider.page-catalog__map-value-metro
+								+i('metro', 'svg-metro')
+								| Академгородок
+						.page-catalog__map-iframe-holder
+							<iframe class="block-iframe page-catalog__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7155760000624!2d30.354277215896396!3d50.465020894195646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ccbfb684cdab%3A0x5aa03561822fab0b!2z0JDQutCw0LTQtdC80LPQvtGA0L7QtNC-0LosINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1608129758214!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					.block-seo
+						.block-seo__buttons
+							a(href="#").block-seo-button Детский сад
+							a(href="#").block-seo-button Детский сад
+							a(href="#").block-seo-button Детский сад
+							a(href="#").block-seo-button Детский сад
+					.block-owner
+						p.block-owner__text
+							+i('star')
+							| Хотите внести изменения? <br> Оставьте заявку и наши менеджеры свяжутся с вами
+						a.block-owner__btn.btn.btn_purple(href="#") Вы владелец садика?

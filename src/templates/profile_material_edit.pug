@@ -1,0 +1,194 @@
+---
+title: Головна
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__slider.page-profile-edit
+				.page__header
+					.page__header-title.h2 Детский сад "Джерело Kids"
+					.page__header-note
+						span.val-required.color-red *
+						| Заповніть всі обов’язкові поля, щоб ми оновили інформацію дитячого садочку.
+				form.form-style-default(action='/', method='post', enctype='multipart/form-data' autocomplete='off')
+					.form-body-group
+						p.form-group-title Общая информация
+						.form-group
+							label.form-label
+								.avatar-holder.avatar-with-abs-btn
+									img(src='img/logo-catalog-page.jpg')
+									a(href="#").abs-btn.color-red
+										+i('trash-2')
+							.form-row
+								.col.form-row--inline(style='max-width: 100%;')
+									.upload-button
+										label.button.btn.btn-light(style='margin-bottom: 0;')
+											| Оновити лого
+											input(type='file' name='test')
+									small.form-input-info.near-upload(style="max-width: 335px;") Завантажте зображення більше ніж 200x200 пікселів у форматі .jpg або .png
+								br
+								.form-row--inline
+									.col.w-100(style='max-width: 630px;')
+										.form-control.form-control-material-link.d-flex.d-flex-a-i-center
+											a.form-control-link.part-1.limit-text(href='#')
+												| Детский сад "Джерело Kids"
+											a.form-control-link.part-2(href='#')
+												| Переглянути
+												+i('external-link', 'svg-icon')
+
+					.form-body-group
+						p.form-group-title Адреса розташування
+						.form-group
+							label.form-label.required-label
+								span Регіон
+							.form-row
+								.col(style='max-width: 280px;')
+									select.form-control.select(name='tmp_name' required)
+										option Львівська обл.
+										option Опція-2
+										option Опція-3
+						.form-group
+							label.form-label.required-label
+								span Місто
+							.form-row
+								.col(style='max-width: 215px;')
+									select.form-control.select(name='tmp_name' required)
+										option Львів
+										option Опція-2
+										option Опція-3
+						.form-group
+							label.form-label.required-label
+								span Район
+							.form-row
+								.col(style='max-width: 295px;')
+									select.form-control.select(name='tmp_name' required)
+										option Шевченківський р-н
+										option Опція-2
+										option Опція-3
+						.form-group
+							label.form-label
+								span Вулиця
+							.form-row
+								.col(style='max-width: 395px;')
+									input.form-control(type='text' name='tmp_name' placeholder='Вулиця')
+					.form-body-group
+						p.form-group-title Соціальні мережі
+						.form-body-group-glue
+							.form-group
+								label.form-label
+									span Facebook
+								.form-row
+									.col(style='max-width: 630px;')
+										.input-group
+											.input-group-prepend
+												span.input-group-text.color-facebook
+													+i('facebook', 'svg-fill')
+											input.form-control(type='text' name='tmp_name' placeholder='https://')
+							.form-group
+								label.form-label
+									span Instagram
+								.form-row
+									.col(style='max-width: 630px;')
+										.input-group
+											.input-group-prepend
+												span.input-group-text
+													img(src="img/instagram.png")
+											input.form-control(type='text' name='tmp_name' placeholder='@nickname' autocomplete='off')
+					.form-body-group
+						p.form-group-title Контактні дані садочку
+						.form-group
+							label.form-label.required-label
+								span Email
+							.form-row
+								.col(style='max-width: 345px;')
+									input.form-control(type='email' name='tmp_name' placeholder='test@gmail.com')
+						.form-group
+							label.form-label
+								span Сайт
+							.form-row
+								.col(style='max-width: 345px;')
+									input.form-control(type='text' name='tmp_name' placeholder='https://')
+						.form-group
+							label.form-label
+								span Номер ліцендзії
+							.form-row
+								.col(style='max-width: 345px;')
+									input.form-control(type='text' name='tmp_name' placeholder='')
+						.form-body-group-glue.glue-col.add-margin
+							.form-group
+								label.form-label
+									span Телефони садочку
+								.form-row
+									.col(style='max-width: 345px;')
+										input.form-control(type='text' name='tmp_name' placeholder='Телефон 1')
+									.col(style='max-width: 345px;')
+										input.form-control(type='text' name='tmp_name' placeholder='Телефон 2')
+									.col(style='max-width: 345px;')
+										input.form-control(type='text' name='tmp_name' placeholder='Телефон 3')
+						.form-group
+							label.form-label
+								span Менеджер
+							.form-row
+								.col.col-avatar-small.d-flex(style='max-width: 345px;')
+									.upload-button
+										label.button.btn.btn-light(style='margin-bottom: 0;')
+											| Оновити аватар
+											input(type='file' name='test')
+									.avatar-holder.avatar-holder-small
+										img(src='img/avatar-none.jpg')
+								.col(style='max-width: 345px;')
+									input.form-control(type='text' name='tmp_name' placeholder='ПІБ')
+								.col(style='max-width: 345px;')
+									input.form-control(type='text' name='tmp_name' placeholder='Посада')
+					.form-body-group
+						p.form-group-title Інфраструктура
+						.form-group.form-group-service
+							label.form-label
+								span Виберіть
+							.form-row.d-flex.d-flex-wrap(style='margin-top: -5px; max-width: 80%;')
+								- for (var n = 0; n < 12; n++) {
+									.checkboxv2
+										input(id="form-structure-input--" + n name='service-' + n type='checkbox')
+										label.checkboxv2__label.add-check-icon(for='form-structure-input--' + n) Голосеевский
+								- }
+					.form-body-group
+						p.form-group-title Інфомрація про ціну
+						.form-group
+							label.form-label.required-label
+								span Ціна абонементу
+							.form-row
+								.col(style='max-width: 220px;')
+									input.form-control.form-control.form-control-near(type='text' name='tmp_name' minlength='6' placeholder='0')
+									span.form-control-near грн/місяць
+						.form-group
+							label.form-label
+								span Внесок
+							.form-row
+								.col(style='max-width: 197px;')
+									input.form-control.form-control-near(type='text' name='tmp_name' minlength='6' placeholder='0' style='padding-right: 75px')
+									span.form-control-near грн/рік
+						.form-group
+							label.form-label
+								span Харчування
+							.form-row
+								.col(style='max-width: 220px;')
+									input.form-control.form-control-near(type='text' name='tmp_name' minlength='6' placeholder='0')
+									span.form-control-near грн/місяць
+						.form-group
+							label.form-label
+								span Входити у вартість
+							.form-row
+								.col(style='max-width: 624px;')
+									textarea.form-control(name='tmp_name' minlength='6' placeholder='Опис у вільній формі.')
+						.form-group
+							label.form-label
+								span Додаткова оплата
+							.form-row
+								.col(style='max-width: 624px;')
+									textarea.form-control(name='tmp_name' minlength='6' placeholder='Опис у вільній формі.')
+					.form-footer
+						button.button.btn.btn_purple.form-btn-submit(type='submit') Оновити садочок
+						a.form-btn-del-profile.animate(href='#') Видалити садочок

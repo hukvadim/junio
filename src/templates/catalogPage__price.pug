@@ -1,0 +1,44 @@
+---
+title: Детский сад "Джерело Kids"
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			+pageCatalogTabs('','', 'active')
+			.page__slider.page-catalog
+				.tab-catalog-price
+					h3.block-title.block-title--catalog-section
+						| Цены в садике Детский сад "Джерело Kids"
+					.price-catalog-box
+						h4.price-catalog-box__label
+							+i('ticket-time', 'svg-price-catalog-box')
+							| 7 500 грн.
+							small.price-catalog-box__label-small
+								span.price-catalog-box__label-small-slash
+									| /
+								| Цена за месяц.
+						.price-catalog-box__desc.typography
+							p Вартість відвідування I-Kids становить 7500 грн на місяць (з врахуванням державної компенсації), додатково оплачується харчування у розмірі 150 грн./день. Оплата здійснюється щомісячно.
+							p Вступ до садочку передбачає внесок у розмірі 5000 грн.
+						p.price-catalog-box__list-title
+							+i('ticket-check', 'svg-price-catalog-box')
+							| Входить в стоимость
+						ul.price-catalog-box__list
+							li Забезпечення навчально-виховного процесу;
+							li Усі необхідні підручники та дидактичні матеріали;
+							li П’ятиразове харчування;
+							li Медичне спостереження.
+						p.price-catalog-box__list-title
+							+i('ticket-dollar', 'svg-price-catalog-box')
+							| Дополнительная оплата:
+						ul.price-catalog-box__list
+							li Робота з логопедом;
+							li Консультації психолога;
+							li Вивчення англійської мови 5 годин на тиждень;
+							li Закриту територію ліцею з доступом за електронними картками.
+						.price-catalog-box__desc.typography
+							p Вартість відвідування I-Kids становить 7500 грн на місяць (з врахуванням державної компенсації), додатково оплачується харчування у розмірі 150 грн./день. Оплата здійснюється щомісячно.
+				

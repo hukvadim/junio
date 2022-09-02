@@ -1,0 +1,35 @@
+---
+title: Контакти
+---
+extends layouts/_layout
+block content
+	.page.page-contacts
+		+sidebar('', '', '', 'active')
+		.page__wrapper
+			+header
+			.page__center
+				.page__header.text-center
+					.page__header-title.h2.font-2 Контакты Junio
+					.page__header-note Junio анализирует детсадов в микрорайонах столицы. Где в Киеве легче устроить ребенка в сад?
+					.users
+				.circle-item-container
+					.circle-item__list.circle-item__list-inline-center
+						a.circle-item__box.circle-item__box-inline(href="#")
+							span.circle-item__icon
+								+i('instagram')
+						a.circle-item__box.circle-item__box-inline(href="#")
+							.circle-item__icon
+								+i('facebook')
+				form.popup__form.form-contacts
+					.popup__fieldset
+						.popup__row
+							.popup__field.field
+								.field__wrap
+									input.field__input(type="text" placeholder="ФИО")
+							.popup__field.field
+								.field__wrap
+									input.field__input(type="text" placeholder="Email")
+						.popup__field.field
+							.field__wrap
+								textarea.field__textarea(placeholder="Написать сообщение...")
+					button.popup__btn.btn.btn_purple.btn-submit(type="submit") Написать
